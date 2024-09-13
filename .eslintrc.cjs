@@ -23,6 +23,7 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'react-hooks/exhaustive-deps': 'warn',
     'consistent-return': 'off',
+    'react/react-in-jsx-scope': 'off',
     quotes: ['error', 'single'],
     'no-mixed-spaces-and-tabs': 'error',
     'no-trailing-spaces': 'error',
