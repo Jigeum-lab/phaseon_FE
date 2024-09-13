@@ -3,6 +3,7 @@ import tseslint from 'typescript-eslint';
 import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
+import eslintPluginReactRefresh from 'eslint-plugin-react-refresh';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default tseslint.config(
@@ -14,6 +15,7 @@ export default tseslint.config(
       react: eslintPluginReact,
       'react-hooks': eslintPluginReactHooks,
       'jsx-a11y': eslintPluginJsxA11y,
+      'react-refresh': eslintPluginReactRefresh,
     },
     languageOptions: {
       ecmaVersion: 2022,
@@ -29,10 +31,10 @@ export default tseslint.config(
       },
     },
     rules: {
-      // 여기에 기존 rules를 추가합니다.
-      'react-refresh/only-export-components': 'off',
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'react/no-array-index-key': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'off',
       'consistent-return': 'off',
       quotes: ['error', 'single'],
       'no-mixed-spaces-and-tabs': 'error',
