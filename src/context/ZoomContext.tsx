@@ -1,4 +1,4 @@
-import { createContext, SetStateAction, useMemo, useState } from 'react';
+import React, { createContext, SetStateAction, useMemo, useState } from 'react';
 import { Updater, useImmer } from 'use-immer';
 
 interface ZoomContextType {

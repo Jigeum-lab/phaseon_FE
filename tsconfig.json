@@ -23,7 +23,7 @@
   "include": [
     "src",
     "svg.d.ts",
-    "eslint.config.js"
+    ".eslintrc.cjs"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
