@@ -85,9 +85,8 @@ export default function FloatingBox() {
             if (index < 6) {
               if (memberObj.img == null) {
                 return <s.PersonSvg width="40" height="40" key={index} />;
-              } else {
-                return <s.Img src={`/public/${memberObj.img}`} alt="" key={index} />;
               }
+              return <s.Img src={`/public/${memberObj.img}`} alt="" key={index} />;
             }
           })}
         </div>

@@ -36,7 +36,7 @@ export default function Carousel() {
       <s.CarouselViewport ref={emblaRef}>
         <s.CarouselContainer>
           {slides.map((carouselObj, index) => {
-            if (carouselObj.type == 'video') {
+            if (carouselObj.type === 'video') {
               return (
                 <s.CarouselSlide key={carouselObj.img + index}>
                   <YouTube
@@ -48,36 +48,35 @@ export default function Carousel() {
                   />
                 </s.CarouselSlide>
               );
-            } else {
-              return (
-                <s.CarouselSlide key={carouselObj.img + index}>
-                  <s.Img
-                    src={`/public/${carouselObj.img}`}
-                    alt=""
-                    $type={carouselObj.type}
-                    onClick={() => {
-                      setStartImg(index);
-                      setShowZoomComponent(true);
-                      document.body.style.overflow = 'hidden';
-                    }}
-                  />
-                </s.CarouselSlide>
-              );
             }
+            return (
+              <s.CarouselSlide key={carouselObj.img + index}>
+                <s.Img
+                  src={`/public/${carouselObj.img}`}
+                  alt=""
+                  $type={carouselObj.type}
+                  onClick={() => {
+                    setStartImg(index);
+                    setShowZoomComponent(true);
+                    document.body.style.overflow = 'hidden';
+                  }}
+                />
+              </s.CarouselSlide>
+            );
           })}
         </s.CarouselContainer>
         <s.ButtonSection>
-          {slides.map((carouselObj, index) => {
+          {slides.map((_carouselObj, index) => {
             if (index < slides.length / 2) {
               return (
                 <s.SlideButton
                   aria-label="btn"
                   key={index}
-                  $bgColor={currentImg == index ? 'color' : 'none'}
+                  $bgColor={currentImg === index ? 'color' : 'none'}
                   onClick={() => {
                     emblaApi?.scrollTo(index);
                   }}
-                ></s.SlideButton>
+                />
               );
             }
           })}

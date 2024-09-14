@@ -1,6 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import * as s from '../../style/common/HeaderStyle';
 import { ReactComponent as ProjectIcon } from '../../assets/svg/ProjectIcon.svg';
-import { useNavigate } from 'react-router-dom';
 
 export default function Header({ TopRef }: { TopRef?: React.RefObject<HTMLDivElement> }) {
   const navigate = useNavigate();

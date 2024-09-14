@@ -5,7 +5,7 @@ import StarButton from '../common/StarButon';
 import NotificationButton from '../common/NotificationButton';
 
 export default function ActionPanel() {
-  const { data, updateData } = useContext(ProjectDetailContext);
+  const { data } = useContext(ProjectDetailContext);
 
   return (
     <s.Section>

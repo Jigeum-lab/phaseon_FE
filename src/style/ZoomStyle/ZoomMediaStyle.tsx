@@ -13,8 +13,8 @@ export const ImgWrapper = styled.div<{ $type: string }>`
 `;
 
 export const Div = styled.div<{ $zoomCount: number; $type: string }>`
-  width: ${({ $zoomCount, $type }) => `${$type == 'row' ? 70 * $zoomCount : 40 * $zoomCount}%`};
-  height: ${({ $type }) => ($type == 'row' ? '80%' : '75%')};
+  width: ${({ $zoomCount, $type }) => `${$type === 'row' ? 70 * $zoomCount : 40 * $zoomCount}%`};
+  height: ${({ $type }) => ($type === 'row' ? '80%' : '75%')};
   position: relative;
   display: flex;
   align-items: center;
@@ -28,13 +28,13 @@ export const Img = styled.img<{
   $dragDirection: string;
   $dragOffSet: number;
 }>`
-  margin: ${({ $dragOffSet }) => ($dragOffSet == 0 ? '0 auto' : `0 0 0 ${$dragOffSet}px`)};
+  margin: ${({ $dragOffSet }) => ($dragOffSet === 0 ? '0 auto' : `0 0 0 ${$dragOffSet}px`)};
   width: 100%;
   height: 100%;
   position: absolute;
   object-fit: contain;
   user-select: none;
-  transition-duration: ${({ $dragOffSet }) => ($dragOffSet != 0 ? '' : '0.3s')};
+  transition-duration: ${({ $dragOffSet }) => ($dragOffSet !== 0 ? '' : '0.3s')};
   transform-origin: center center;
   opacity: ${({ $dragDirection }) => ($dragDirection !== 'none' ? 0 : 1)};
   cursor: ${({ $drag }) => ($drag ? 'grabbing' : 'grab')};

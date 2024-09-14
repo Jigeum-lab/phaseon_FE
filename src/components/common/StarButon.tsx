@@ -19,9 +19,9 @@ export default function StarButton({
     <s.Button
       $width={width}
       $height={height}
-      $border={'none'}
-      $color={'white'}
-      $type={'star'}
+      $border="none"
+      $color="white"
+      $type="star"
       onClick={() => {
         setIsLiked((prev) => !prev);
         updateData((update) => {

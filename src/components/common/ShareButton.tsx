@@ -1,6 +1,6 @@
+import { useContext } from 'react';
 import * as s from '../../style/projectDetail/common/ButtonStyle';
 import { ReactComponent as Share } from '../../assets/svg/Share.svg';
-import { useContext } from 'react';
 import { ProjectDetailContext } from '../../context/ProjectDetailContext';
 
 export default function ShareButton({ width, height }: { width: number; height: number }) {
@@ -9,9 +9,9 @@ export default function ShareButton({ width, height }: { width: number; height: 
     <s.Button
       $width={width}
       $height={height}
-      $border={'none'}
-      $color={'#69acff'}
-      $type={'share'}
+      $border="none"
+      $color="#69acff"
+      $type="share"
       onClick={() => {
         setShowShare(true);
       }}

@@ -104,9 +104,9 @@ export const SlideButton = styled.button<{ $bgColor: string }>`
   width: 6px;
   height: 6px;
   border: ${({ $bgColor }) =>
-    $bgColor == 'color' ? '0.6px solid rgba(105, 172, 255, 0.08)' : '0.6px solid rgba(23,23,25,0.08)'};
+    $bgColor === 'color' ? '0.6px solid rgba(105, 172, 255, 0.08)' : '0.6px solid rgba(23,23,25,0.08)'};
   border-radius: 100%;
   outline: none;
-  background-color: ${({ $bgColor }) => ($bgColor == 'color' ? '#69ACFF' : '#F2F2F7')};
+  background-color: ${({ $bgColor }) => ($bgColor === 'color' ? '#69ACFF' : '#F2F2F7')};
   cursor: pointer;
 `;

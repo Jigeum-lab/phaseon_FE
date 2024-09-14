@@ -21,8 +21,8 @@ export const CategoryText = styled.p<{ $currentCategory: string; $id: string }>`
   width: auto;
   height: 100%;
   box-sizing: border-box;
-  border-bottom: ${(props) => (props.$currentCategory == props.$id ? '4px solid #69acff' : 'none')};
-  color: ${(props) => (props.$currentCategory == props.$id ? 'black' : '#47484c')}; // focus -> 000
+  border-bottom: ${(props) => (props.$currentCategory === props.$id ? '4px solid #69acff' : 'none')};
+  color: ${(props) => (props.$currentCategory === props.$id ? 'black' : '#47484c')}; // focus -> 000
   font-size: 15px;
   font-weight: 500;
   line-height: 146.7%;

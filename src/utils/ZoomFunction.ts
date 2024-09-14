@@ -88,21 +88,33 @@ export function handleMouseUp(e: MouseEvent, params: HandleMouseUpType) {
   const xLimit = 25 * zoomCount;
   const yLimit = 30 * zoomCount;
 
+  const getYPosition = (value: number) => {
+    let yPosition;
+    if (value > 50) {
+      yPosition = yLimit;
+    } else if (y > -50) {
+      yPosition = value;
+    } else {
+      yPosition = -yLimit;
+    }
+    return yPosition;
+  };
+
   if (isZoomed && drag) {
     if (x > 50) {
       updateTransform({
         x: xLimit,
-        y: y > 50 ? yLimit : y > -50 ? y : -yLimit,
+        y: getYPosition(y),
       });
     } else if (x > -50) {
       updateTransform({
-        x: x,
-        y: y > 50 ? yLimit : y > -50 ? y : -yLimit,
+        x,
+        y: getYPosition(y),
       });
     } else {
       updateTransform({
         x: -xLimit,
-        y: y > 50 ? yLimit : y > -50 ? y : -yLimit,
+        y: getYPosition(y),
       });
     }
   }
@@ -110,10 +122,10 @@ export function handleMouseUp(e: MouseEvent, params: HandleMouseUpType) {
   if (dragAndDrop) {
     if (dragNextImg.x + 100 < e.clientX) {
       setDragDirection('left');
-      setStartImg((prev) => (prev == 0 ? carouselImgs.length - 1 : prev - 1));
+      setStartImg((prev) => (prev === 0 ? carouselImgs.length - 1 : prev - 1));
     } else if (dragNextImg.x > e.clientX + 100) {
       setDragDirection('right');
-      setStartImg((prev) => (prev == carouselImgs.length - 1 ? 0 : prev + 1));
+      setStartImg((prev) => (prev === carouselImgs.length - 1 ? 0 : prev + 1));
     }
   }
 

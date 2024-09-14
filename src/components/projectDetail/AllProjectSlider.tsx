@@ -3,9 +3,9 @@ import { EmblaCarouselType } from 'embla-carousel';
 import AutoScroll from 'embla-carousel-auto-scroll';
 import { useCallback, useEffect, useState } from 'react';
 import { Updater, useImmer } from 'use-immer';
+import { useNavigate } from 'react-router-dom';
 import { ProjectGalleryData } from '../../interface';
 import * as s from '../../style/projectDetail/AllProjectSliderStyle';
-import { useNavigate } from 'react-router-dom';
 import ButtonBox from './ButtonBox';
 
 export default function AllProjectSlider() {
@@ -17,7 +17,7 @@ export default function AllProjectSlider() {
 
   useEffect(() => {
     getProjects(updateData);
-  }, []);
+  }, [updateData]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -65,19 +65,19 @@ export default function AllProjectSlider() {
           ))}
         </s.CarouselContainer>
         <s.ButtonSection>
-          {data.data.map((carouselObj, index) => {
+          {data.data.map((_carouselObj, index) => {
             if (index < data.data.length / 2) {
               return (
                 <s.SlideButton
                   aria-label="btn"
                   key={index}
-                  $bgColor={currentImg == index ? 'color' : 'none'}
+                  $bgColor={currentImg === index ? 'color' : 'none'}
                   onClick={() => {
                     if (!emblaApi) return;
                     emblaApi.scrollTo(index);
                     startScroll(emblaApi);
                   }}
-                ></s.SlideButton>
+                />
               );
             }
           })}

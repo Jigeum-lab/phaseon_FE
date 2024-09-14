@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Updater, useImmer } from 'use-immer';
+import { useNavigate } from 'react-router-dom';
 import { ProjectGalleryData } from '../../interface';
 import * as s from '../../style/ProjectGallery/ProjectCollectionStyle';
-import { useNavigate } from 'react-router-dom';
 
 export default function ProjectCollection({ TopRef }: { TopRef: React.RefObject<HTMLDivElement> }) {
   const [project, updateProject] = useImmer<ProjectGalleryData>({

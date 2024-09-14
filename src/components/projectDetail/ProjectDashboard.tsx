@@ -11,7 +11,6 @@ import { ProjectDetailContext } from '../../context/ProjectDetailContext';
 import Share from './Share';
 import AllProjectSlider from './AllProjectSlider';
 
-
 export default function ProjectDashboard() {
   const { showShare } = useContext(ProjectDetailContext);
   const { currentCategory, setCurrentCategory } = useContext(CategoryContext);
@@ -39,10 +38,10 @@ export default function ProjectDashboard() {
             </s.CategoryText>
           ))}
         </s.CategoryBox>
-        <ZoomImgProvider>{currentCategory == 'information' && <ProjectInfo />}</ZoomImgProvider>
-        {currentCategory == 'performance' && <Performance />}
-        {currentCategory == 'release' && <Release />}
-        {currentCategory == 'introduction' && <Introduction />}
+        <ZoomImgProvider>{currentCategory === 'information' && <ProjectInfo />}</ZoomImgProvider>
+        {currentCategory === 'performance' && <Performance />}
+        {currentCategory === 'release' && <Release />}
+        {currentCategory === 'introduction' && <Introduction />}
         <ActionPanel />
         <AllProjectSlider />
       </s.Section>

@@ -17,11 +17,11 @@ export default function Introduction() {
           <s.Name>{memberObj.name}</s.Name>
           <s.Role>{memberObj.role}</s.Role>
           <s.LinkBox>
-            {memberObj.profilelink.map((links, index) => {
-              if (links.icon == 'instargram') {
+            {memberObj.profilelink.map((links, memberIndex) => {
+              if (links.icon === 'instargram') {
                 return (
                   <Instargram
-                    key={links.link + index}
+                    key={links.link + memberIndex}
                     onClick={() => {
                       window.open(links.link);
                     }}

@@ -15,14 +15,14 @@ export default function ZoomContainer() {
       <HandleBox />
       <ZoomMediaBox />
       <s.CarouselButtonBox>
-        {carouselImgs.map((carouselObj, index) => (
+        {carouselImgs.map((_carouselObj, index) => (
           <s.CarouselButton
             key={index}
-            $focus={index == startImg ? true : false}
+            $focus={index === startImg}
             onClick={() => {
               setStartImg(index);
             }}
-          ></s.CarouselButton>
+          />
         ))}
       </s.CarouselButtonBox>
     </s.Section>

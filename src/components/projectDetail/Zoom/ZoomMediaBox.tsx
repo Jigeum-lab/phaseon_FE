@@ -1,10 +1,10 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import YouTube from 'react-youtube';
+import { useImmer } from 'use-immer';
 import { ProjectDetailContext } from '../../../context/ProjectDetailContext';
 import { ZoomContext } from '../../../context/ZoomContext';
-import * as s from '../../../style/ZoomStyle/ZoomMediaStyle.tsx';
-import { useImmer } from 'use-immer';
-import { handleDoubleClick, handleMouseDown, handleMouseMove, handleMouseUp } from '../../../utils/ZoomFunction.ts';
+import * as s from '../../../style/ZoomStyle/ZoomMediaStyle';
+import { handleDoubleClick, handleMouseDown, handleMouseMove, handleMouseUp } from '../../../utils/ZoomFunction';
 
 export default function ZoomMediaBox() {
   const { data } = useContext(ProjectDetailContext);
@@ -61,9 +61,21 @@ export default function ZoomMediaBox() {
     };
   }, [drag, startPos, isZoomed, dragDirection]);
 
+  const getLeftPosition = (direction: string) => {
+    switch (direction) {
+      case 'left':
+        return '-2000px';
+      case 'right':
+        return '2000px';
+      case 'none':
+      default:
+        return '0';
+    }
+  };
+
   return (
     <>
-      {carouselImgs[startImg].type != 'video' && (
+      {carouselImgs[startImg].type !== 'video' && (
         <s.ImgWrapper
           ref={imgWrapperRef}
           $type={carouselImgs[startImg].type}
@@ -75,7 +87,7 @@ export default function ZoomMediaBox() {
             <s.LeftButton
               onClick={() => {
                 setStartImg((prev) => {
-                  if (prev == 0) {
+                  if (prev === 0) {
                     return carouselImgs.length - 1;
                   }
                   return prev - 1;
@@ -93,7 +105,7 @@ export default function ZoomMediaBox() {
               $dragDirection={dragDirection}
               style={{
                 transform: `translateX(${dragOffSet}px) scale(${zoomCount}) translate(${transform.x}px, ${transform.y}px)`,
-                left: dragDirection == 'left' ? '-2000px' : dragDirection == 'none' ? '0' : '2000px',
+                left: getLeftPosition(dragDirection),
               }}
               onMouseDown={(e) => {
                 handleMouseDown(e, {
@@ -109,7 +121,7 @@ export default function ZoomMediaBox() {
             <s.RightButton
               onClick={() => {
                 setStartImg((prev) => {
-                  if (prev == carouselImgs.length - 1) {
+                  if (prev === carouselImgs.length - 1) {
                     return 0;
                   }
                   return prev + 1;
@@ -119,7 +131,7 @@ export default function ZoomMediaBox() {
           </s.Div>
         </s.ImgWrapper>
       )}
-      {carouselImgs[startImg].type == 'video' && (
+      {carouselImgs[startImg].type === 'video' && (
         <YouTube
           videoId={carouselImgs[0].img}
           opts={{

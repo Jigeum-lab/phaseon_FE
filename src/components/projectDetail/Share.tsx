@@ -1,6 +1,6 @@
+import { useContext, useEffect } from 'react';
 import { ProjectDetailContext } from '../../context/ProjectDetailContext';
 import * as s from '../../style/projectDetail/ShareStyle';
-import { useContext, useEffect } from 'react';
 
 export default function Share() {
   const { setShowShare } = useContext(ProjectDetailContext);
@@ -46,6 +46,6 @@ function HandleDownload() {
   const url = canvas ? canvas.toDataURL('image/png') : '';
   const link = document.createElement('a');
   link.href = url;
-  link.download = `qr.png`;
+  link.download = 'qr.png';
   link.click();
 }
