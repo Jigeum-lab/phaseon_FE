@@ -5,31 +5,45 @@ import * as s from '@/style/projectDetail/IntroductionStyle';
 export default function Introduction() {
   const { memberInfo } = useContext(ProjectDetailContext);
 
-  function getIcon(platform: string, key: string) {
-    switch (platform) {
-      case 'GITHUB':
-        return <s.SvgIcon key={key} name="GITHUB" width={24} height={24} fill="black" />;
-        break;
-      case 'LINKEDIN':
-        return <s.SvgIcon key={key} name="LINKEDINCOLOR" />;
-        break;
-      case 'TWITTER':
-        return <s.SvgIcon key={key} name="TWITTER" width={24} height={24} fill="#00acee" />;
-        break;
-      case 'FACEBOOK':
-        return <s.SvgIcon key={key} name="FACEBOOKCOLOR" />;
-        break;
-      case 'INSTARGRAM':
-        return <s.SvgIcon key={key} name="INSTARGRAMCOLOR" />;
-        break;
-      case 'YOUTUBE':
-        return <s.SvgIcon key={key} name="YOUTUBECOLOR" />;
-        return;
-      case 'BLOG':
-        return <s.SvgIcon key={key} name="BLOGCOLOR" />;
-      default:
-        return <s.SvgIcon key={key} name="OTHER" width={24} height={24} fill="black" />;
-    }
+  type Platform = 'GITHUB' | 'LINKEDIN' | 'TWITTER' | 'FACEBOOK' | 'INSTAGRAM' | 'YOUTUBE' | 'BLOG' | 'OTHER';
+
+  type IconName =
+    | 'GITHUB'
+    | 'LINKEDIN'
+    | 'TWITTER'
+    | 'FACEBOOKCOLOR'
+    | 'INSTAGRAMCOLOR'
+    | 'YOUTUBECOLOR'
+    | 'BLOGCOLOR'
+    | 'OTHER'
+    | 'LINKEDINCOLOR'
+    | 'FACEBOOKCOLOR'
+    | 'INSTAGRAMCOLOR'
+    | 'YOUTUBECOLOR'
+    | 'BLOGCOLOR';
+
+  // 링크 타입이 유효한지 확인하는 함수
+  function isValidPlatform(linkType: string): linkType is Platform {
+    return ['GITHUB', 'LINKEDIN', 'TWITTER', 'FACEBOOK', 'INSTAGRAM', 'YOUTUBE', 'BLOG', 'OTHER'].includes(linkType);
+  }
+
+  function getIcon(platform: Platform, url: string) {
+    const iconConfig: Record<Platform, { name: IconName; width?: number; height?: number; fill?: string }> = {
+      GITHUB: { name: 'GITHUB', width: 24, height: 24, fill: 'black' },
+      LINKEDIN: { name: 'LINKEDINCOLOR' },
+      TWITTER: { name: 'TWITTER', width: 24, height: 24, fill: '#00acee' },
+      FACEBOOK: { name: 'FACEBOOKCOLOR' },
+      INSTAGRAM: { name: 'INSTAGRAMCOLOR' },
+      YOUTUBE: { name: 'YOUTUBECOLOR' },
+      BLOG: { name: 'BLOGCOLOR' },
+      OTHER: { name: 'OTHER', width: 24, height: 24, fill: 'black' },
+    };
+
+    const { name, width, height, fill } = iconConfig[platform] || iconConfig.OTHER;
+
+    return (
+      <s.SvgIcon key={url} name={name} width={width} height={height} fill={fill} onClick={() => window.open(url)} />
+    );
   }
 
   return (
@@ -41,7 +55,7 @@ export default function Introduction() {
           <s.Role>{memberObj.userRole}</s.Role>
           <s.LinkBox>
             {memberObj.links.map((linkObj) => {
-              return getIcon(linkObj.linkType, linkObj.url);
+              return isValidPlatform(linkObj.linkType) ? getIcon(linkObj.linkType, linkObj.url) : null;
             })}
           </s.LinkBox>
         </s.Profile>

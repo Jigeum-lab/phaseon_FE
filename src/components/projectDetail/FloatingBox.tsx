@@ -23,7 +23,7 @@ export default function FloatingBox({ setShowModal }: { setShowModal: React.Disp
     LINKEDIN: '링크드인',
     TWITTER: '트위터',
     FACEBOOK: '페이스북',
-    INSTARGRAM: '인스타그램',
+    INSTAGRAM: '인스타그램',
     YOUTUBE: '유튜브',
     BLOG: '블로그',
     WEBSITE: '웹사이트',

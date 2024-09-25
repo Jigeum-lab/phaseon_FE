@@ -40,7 +40,7 @@ export { ReactComponent as PERSONAL_BRANDING } from '@/assets/svg/PersonalBrandi
 export { ReactComponent as ENTERTAINMENT } from '@/assets/svg/Entertament.svg';
 export { ReactComponent as EDUCATION } from '@/assets/svg/Education.svg';
 
-export { ReactComponent as INSTARGRAM } from '@/assets/svg/Instargram.svg';
+export { ReactComponent as INSTAGRAM } from '@/assets/svg/Instagram.svg';
 export { ReactComponent as FACEBOOK } from '@/assets/svg/FaceBook.svg';
 export { ReactComponent as BLOG } from '@/assets/svg/Blog.svg';
 export { ReactComponent as YOUTUBE } from '@/assets/svg/Youtube.svg';
@@ -49,7 +49,7 @@ export { ReactComponent as LINKEDIN } from '@/assets/svg/LinkedIn.svg';
 export { ReactComponent as GITHUB } from '@/assets/svg/Github.svg';
 export { ReactComponent as TWITTER } from '@/assets/svg/Twitter.svg';
 
-export { ReactComponent as INSTARGRAMCOLOR } from '@/assets/svg/InstargramColor.svg';
+export { ReactComponent as INSTAGRAMCOLOR } from '@/assets/svg/InstagramColor.svg';
 export { ReactComponent as FACEBOOKCOLOR } from '@/assets/svg/FaceBookColor.svg';
 export { ReactComponent as BLOGCOLOR } from '@/assets/svg/BlogColor.svg';
 export { ReactComponent as YOUTUBECOLOR } from '@/assets/svg/YoutubeColor.svg';
