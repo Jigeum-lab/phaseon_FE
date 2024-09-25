@@ -32,7 +32,7 @@ export default function Header({ setShowModal }: { setShowModal: React.Dispatch<
           <s.Article onClick={handleModal}>아티클</s.Article>
         </s.Nav>
       </s.NavigationBox>
-      <s.NavigationBox width={214}>
+      <s.NavigationBox width={243}>
         <s.SvgIcon name="Search" onClick={handleModal} />
         <s.SvgIcon name="Notice" onClick={handleModal} />
         <s.SvgIcon name="DefaultUserImg" width={32} height={32} onClick={handleModal} />
