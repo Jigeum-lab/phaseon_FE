@@ -117,7 +117,6 @@ async function getMember(updateData: Updater<Member>, id: string) {
     const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}/members`);
     // const response = await fetch('/dummy/attiMember.json');
     const data = await response.json();
-    console.log(data.data);
     updateData((obj) => {
       Object.assign(obj, data.data);
     });

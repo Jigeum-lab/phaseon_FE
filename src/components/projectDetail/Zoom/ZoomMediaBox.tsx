@@ -18,7 +18,18 @@ export default function ZoomMediaBox() {
   const [dragNextImg, updateDragNextImg] = useImmer<{ x: number; y: number }>({ x: 0, y: 0 });
   const [dragOffSet, setDragOffSet] = useState(0);
   const [dragDirection, setDragDirection] = useState('none');
+  const [imgDirection, setImgDirection] = useState('row');
   const carouselImgs = projectInfo.projectMedia;
+  const img = new Image();
+  img.src = carouselImgs[startImg].url;
+
+  useEffect(() => {
+    if (img.width >= 1920) {
+      setImgDirection('row');
+    } else {
+      setImgDirection('col');
+    }
+  }, [img.width]);
 
   useEffect(() => {
     const MouseMoveFunction = (e: MouseEvent) => {
@@ -95,7 +106,7 @@ export default function ZoomMediaBox() {
             handleDoubleClick({ setIsZoomed, isZoomed, setZoomCount, updateTransform });
           }}
         >
-          <s.Div $zoomCount={zoomCount} $type={carouselImgs[startImg].mediaType}>
+          <s.Div $zoomCount={zoomCount} $type={imgDirection}>
             <s.LeftButton
               name="LeftButton"
               onClick={() => {
