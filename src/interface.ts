@@ -64,7 +64,14 @@ export interface ReleaseObj {
 }
 
 export interface ReleaseType {
-  data: ReleaseObj[];
+  projectReleases: [
+    {
+      id: number;
+      title: string;
+      description: string;
+      createdAt: string;
+    },
+  ];
 }
 
 export interface AccomplishmentObj {
@@ -89,11 +96,9 @@ export interface NewsObj {
 }
 
 export interface Accomplishment {
-  data: {
-    accomplishments: AccomplishmentObj[];
-    certifications: CertificationObj[];
-    news: NewsObj[];
-  };
+  accomplishments: AccomplishmentObj[];
+  certifications: CertificationObj[];
+  news: NewsObj[];
 }
 
 export interface Link {
