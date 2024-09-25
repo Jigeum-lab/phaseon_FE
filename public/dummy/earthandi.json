@@ -1,0 +1,220 @@
+{
+  "data": {
+    "projectname": "Earh&i",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "기후 변화 대응을 위한 행동을 촉구하는 플랫폼",
+      "description": "Earth&I (E&I)는 기후 변화에 대한 인식은 있지만, 실제 행동으로 이어지지 않는 문제를 해결하는 플랫폼입니다. 사용자는 기후 행동이 지구와 자신의 건강에 얼마나 중요한지를 쉽게 이해하게 됩니다. E&I는 사람들의 행동을 변화시켜 기후 변화 대응을 위한 지속 가능한 습관을 형성하도록 돕습니다."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "ly9mLo1H3fs",
+            "type": "video"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel1.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel2.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel3.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel4.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel5.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel6.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel7.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel8.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel9.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel10.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel11.png",
+            "type": "row"
+          },
+          {
+            "img": "png/earthandi/earthandi-carousel12.png",
+            "type": "row"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "기후 변화에 대한 인식을 행동으로 바꾸는 플랫폼 Earth&I! 어떤 기능들이 있는지 함께 살펴볼까요?",
+          "feature": [
+            {
+              "title": "🌍 맞춤형 기후 행동 알림",
+              "description": "사용자에게 맞춤형 알림을 제공하여 기후 행동을 잊지 않도록 도와줘요.<br/>이제는 기후 변화에 대한 행동을 쉽게 실천할 수 있게 된답니다!"
+            },
+            {
+              "title": "🤝 상호작용 캐릭터와의 교류",
+              "description": "E&I의 캐릭터와 소통하며 자신의 행동이 지구와 자신에게 어떤 영향을 미치는지 이해할 수 있어요.<br/>이로 인해 기후 행동의 중요성을 더욱 깊이 느낄 수 있답니다."
+            },
+            {
+              "title": "📊 실시간 탄소 배출 모니터링",
+              "description": "사용자의 탄소 배출량을 실시간으로 확인하고, 자신의 행동에 따라 캐릭터의 상태가 변화해요.<br/>이를 통해 지속적인 행동 변화를 유도할 수 있답니다."
+            },
+            {
+              "title": "👫 친구와 함께하는 기후 챌린지",
+              "description": "친구의 탄소 배출량과 순위를 확인하고, 응원 메시지를 보내며 함께 기후 행동에 참여할 수 있어요.<br/>사회적 연대감을 느끼며 더 나은 행동으로 이어질 수 있답니다."
+            },
+            {
+              "title": "📸 환경 챌린지 참여",
+              "description": "환경 챌린지에 참여하여 사진을 제출하고, 나만의 지구 로드맵을 만들 수 있어요.<br/>기후 변화 문제 해결에 기여하는 즐거운 경험을 제공한답니다."
+            }
+          ]
+        },
+        "techstack": ["Flutter", "Firebase", "Google Cloud", "Gemini", "Vertex AI"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "1.2",
+            "date": "2024.08.03",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/earthandi/earthandi-m1.png",
+            "name": "손형준",
+            "role": "Client / Server Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/earthandi/earthandi-m2.png",
+            "name": "이상돈",
+            "role": "AI Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/earthandi/earthandi-m3.png",
+            "name": "심서현",
+            "role": "Designer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/earthandi/earthandi-m4.png",
+            "name": "정원호",
+            "role": "Client Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

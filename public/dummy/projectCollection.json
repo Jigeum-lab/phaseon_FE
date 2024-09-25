@@ -1,0 +1,154 @@
+{
+  "data": {
+    "projects": [
+      {
+        "id": 1,
+        "thumbnail": "png/atti.png",
+        "title": "ATTI",
+        "summary": "치매환자를 위한 기억의 회상과 기록 솔루션",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 2,
+        "thumbnail": "png/drugbox.png",
+        "title": "DrugBox",
+        "summary": "의약품의 올바른 관리 및 폐기를 도와주는 솔루션",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 3,
+        "thumbnail": "png/plogus.png",
+        "title": "PlogUs",
+        "summary": "플로깅 활동을 통해 환경과 건강 모두를 지킬 수 있는 프로젝트",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 4,
+        "thumbnail": "png/fluentify.png",
+        "title": "fluentify",
+        "summary": "청각 장애 아동의 의사소통 문제를 해결하는 솔루션",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 5,
+        "thumbnail": "png/com-ma.png",
+        "title": "COM-MA",
+        "summary": "청각 장애 부모와 자녀(CODA)를 위한 AI 카메라 기반 수화 교육 플랫폼",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 6,
+        "thumbnail": "png/earthandi.png",
+        "title": "Earth&I",
+        "summary": "기후 변화 대응을 위한 행동을 촉구하는 플랫폼",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 7,
+        "thumbnail": "png/spacedog.png",
+        "title": "Space Dog",
+        "summary": "청각장애인을 위한 반려견 케어 지원 솔루션",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 8,
+        "thumbnail": "png/pathpal.png",
+        "title": "PathPal",
+        "summary": "시각 장애인을 위한 안전한 보행을 지원하는 AI 기반 내비게이션 서비스",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 9,
+        "thumbnail": "png/pengy.png",
+        "title": "Pengy",
+        "summary": "일상에서 화재 위험을 쉽게 관리하고 예방하는 AI 친구",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 10,
+        "thumbnail": "png/vridge.png",
+        "title": "VRIDGE",
+        "summary": "언어 장애인을 위한 나만의 목소리를 만들어주는 특별한 음성 합션 솔루션",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 11,
+        "thumbnail": "png/saybetter.png",
+        "title": "Say Better",
+        "summary": "뇌 손상 장애 아동을 위한 편리한 비대면 언어 치료 솔루션",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      },
+      {
+        "id": 12,
+        "thumbnail": "png/audiopoli.png",
+        "title": "Audio Poli",
+        "summary": "AI 기반 긴급 상황 실시간 대응 음성 분석 시스템",
+        "likeCount": 0,
+        "awardCount": 0,
+        "memberCount": 0,
+        "viewCount": 0,
+        "createdAt": "2024-01-15T12:00:00Z",
+        "category": ["category", "category"]
+      }
+    ],
+    "totalProjects": 15,
+    "totalMembers": 6,
+    "category": null
+  },
+  "error": null
+}

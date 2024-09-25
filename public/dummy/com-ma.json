@@ -1,0 +1,192 @@
+{
+  "data": {
+    "projectname": "COM-MA",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "청각 장애 부모와 자녀(CODA)를 위한 AI 카메라 기반 수화 교육 플랫폼 ",
+      "description": "AI 카메라로 수화를 인식하고 학습 자료로 변환하여, CODA가 자신감을 가지고 부모와 소통할 수 있도록 지원해요."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "WfFZMll-lgc",
+            "type": "video"
+          },
+          {
+            "img": "png/com-ma/com-ma-carousel1.png",
+            "type": "row"
+          },
+          {
+            "img": "png/com-ma/com-ma-carousel2.png",
+            "type": "row"
+          },
+          {
+            "img": "png/com-ma/com-ma-carousel3.png",
+            "type": "row"
+          },
+          {
+            "img": "png/com-ma/com-ma-carousel4.png",
+            "type": "row"
+          },
+          {
+            "img": "png/com-ma/com-ma-carousel5.png",
+            "type": "row"
+          },
+          {
+            "img": "png/com-ma/com-ma-carousel6.png",
+            "type": "row"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "어린 CODA를 위해 수화 교육을 통해 양질의 교육과 불평등 감소를 목표로 하는 COM-MA 솔루션을 함께 알아볼까요?",
+          "feature": [
+            {
+              "title": "🤟 손으로 말해봐요!",
+              "description": "카메라 앞에서 수화를 스캔하면 텍스트, 이미지 및 오디오 파일로 변환돼요.<br/>스캔된 결과는 단어 카드로 변환되어 저장할 수 있어요."
+            },
+            {
+              "title": "🎯 하루하루 목표를 세워요",
+              "description": "홈 화면에서 사용자가 일일 목표를 설정하고, 구조화된 학습을 위해 콘텐츠를 미리 볼 수 있어요.<br/>저장된 단어는 단어 목록 페이지에서 복습할 수 있고, 단어 카드는 언제든지 학습 도구로 사용할 수 있어요. "
+            },
+            {
+              "title": "🧩 재미있는 퀴즈 만들기",
+              "description": "단어 카드를 사용해 자유롭게 퀴즈를 만들 수 있어요.<br/>퀴즈를 통해 학습 수준을 확인할 수 있어요."
+            },
+            {
+              "title": "📚 동화와 함께 배우기",
+              "description": "COM-MA는 자막과 수화가 포함된 동화를 선택하여 제공해요.<br/>미디어 동화를 시청하면서 더욱 재미있게 배울 수 있어요."
+            }
+          ]
+        },
+        "techstack": ["Android", "Flask", "MySQL", "Springboot", "TensorFlow"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "0.0",
+            "date": "0000.00.00",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/com-ma/com-ma-m1.png",
+            "name": "정수미",
+            "role": "AI Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/com-ma/com-ma-m2.png",
+            "name": "송은나래",
+            "role": "PM / Designer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/com-ma/com-ma-m3.png",
+            "name": "서묘진",
+            "role": "Android Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/com-ma/com-ma-m4.png",
+            "name": "송하연",
+            "role": "Back-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "data": {
+    "projectname": "Say Better",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "뇌 손상 장애 아동을 위한 편리한 비대면 언어 치료 솔루션",
+      "description": "Say Better는 뇌 손상 장애를 가진 아동들이 그림 기호를 통해 언어 치료를 받을 수 있도록 돕는 솔루션이에요. 이 서비스는 교육자들이 인공지능의 도움을 받아 치료 계획을 쉽게 세울 수 있게 해주고, 아동들은 치료가 끝난 후에도 배운 기호로 소통할 수 있습니다. Say Better는 모든 아동이 언어 교육을 받을 수 있도록 지원하며, 그들이 자신감을 갖고 의사소통할 수 있도록 도와주는 친구 같은 존재랍니다."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "i28pV065ZAY",
+            "type": "video"
+          },
+          {
+            "img": "png/saybetter/saybetter-carousel1.png",
+            "type": "row"
+          },
+          {
+            "img": "png/saybetter/saybetter-carousel2.png",
+            "type": "row"
+          },
+          {
+            "img": "png/saybetter/saybetter-carousel3.png",
+            "type": "row"
+          },
+          {
+            "img": "png/saybetter/saybetter-carousel4.png",
+            "type": "row"
+          },
+          {
+            "img": "png/saybetter/saybetter-carousel5.png",
+            "type": "row"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "뇌 손상 장애 아동들이 더욱 효과적으로 의사소통 능력을 기를 수 있게 도와주는 Say Better! 그 기능을 함께 알아볼까요?",
+          "feature": [
+            {
+              "title": "🗣️ 비대면 언어 치료",
+              "description": "아동들이 집에서도 편하게 언어 치료를 받을 수 있어요.<br/>그림 기호를 통해 의사소통을 연습하며, 치료를 받는 동안 더욱 자신감을 키울 수 있답니다."
+            },
+            {
+              "title": "🤖 AI 기호 추천",
+              "description": "교육자가 치료를 계획할 때 인공지능이 도움을 줘요.<br/>필요에 맞는 그림 기호를 추천해 주니까, “이 기호가 좋겠어요!”라는 말을 듣는 기분으로 쉽게 선택할 수 있어요."
+            },
+            {
+              "title": "📞 실시간 소통",
+              "description": "교육자와 아동이 함께 학습하며 실시간으로 소통할 수 있어요.<br/>“이 기호를 사용해 볼까요?”라고 말하며 서로의 진행 상황을 체크할 수 있답니다."
+            },
+            {
+              "title": "📊 진행 상황 기록",
+              "description": "각 치료 세션 후 아동의 발전 상황이 클라우드에 기록돼요.<br/>언제든지 “어떤 부분이 좋아졌을까?”하고 확인할 수 있어요."
+            },
+            {
+              "title": "🔄 계속되는 의사소통 지원",
+              "description": "치료가 끝난 후에도 아동이 배운 기호를 활용해 소통할 수 있도록 도와줘요.<br/>“이 기호로 다시 이야기해볼까요?”라는 방식으로 지속적으로 의사소통을 이어갈 수 있답니다."
+            }
+          ]
+        },
+        "techstack": ["Android", "Firebase", "Docker", "Spring", "Vertex AI"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "0.0",
+            "date": "0000.00.00",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/saybetter/saybetter-m1.png",
+            "name": "지영인",
+            "role": "PM",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/saybetter/saybetter-m2.png",
+            "name": "이채원",
+            "role": "Educator App Engineer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/saybetter/saybetter-m3.png",
+            "name": "고현철",
+            "role": "Learner App Engineer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/saybetter/saybetter-m4.png",
+            "name": "한지윤",
+            "role": "UI/UX Designer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/saybetter/saybetter-m5.png",
+            "name": "최선규",
+            "role": "Service Server Engineer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/saybetter/saybetter-m6.png",
+            "name": "김태규",
+            "role": "ML Server Engineer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/saybetter/saybetter-m7.png",
+            "name": "이지호",
+            "role": "Service Server Enginner",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/saybetter/saybetter-m8.png",
+            "name": "이은미",
+            "role": "Service Server Engineer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

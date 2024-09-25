@@ -1,0 +1,192 @@
+{
+  "data": {
+    "projectname": "Space Dog",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "청각장애인을 위한 반려견 케어 지원 솔루션",
+      "description": "Space Dog은 반려견의 짖음이나 이상 행동을 감지하여 청각장애인에게 알림을 제공하는 애플리케이션입니다. 위치 추적 기능을 통해 반려견의 탈출 시에도 안전하게 관리할 수 있도록 돕습니다."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "png/spacedog/spacedog-carousel1.gif",
+            "type": "col"
+          },
+          {
+            "img": "png/spacedog/spacedog-carousel2.gif",
+            "type": "col"
+          },
+          {
+            "img": "png/spacedog/spacedog-carousel3.gif",
+            "type": "col"
+          },
+          {
+            "img": "png/spacedog/spacedog-carousel4.gif",
+            "type": "col"
+          },
+          {
+            "img": "png/spacedog/spacedog-carousel5.gif",
+            "type": "col"
+          },
+          {
+            "img": "png/spacedog/spacedog-carousel6.gif",
+            "type": "col"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "청각장애인을 위한 웨어러블 기기를 활용한 애플리케이션 Space Dog! 어떤 기능들이 있는지 함께 살펴볼까요?",
+          "feature": [
+            {
+              "title": "🐶 소리 감지 알림",
+              "description": "반려견의 짖음이나 파손 소리를 감지하여 사용자에게 즉시 알림을 보냅니다.<br/>이제 반려견의 행동을 쉽게 모니터링할 수 있어요!"
+            },
+            {
+              "title": "🔔 탈출 경고 및 위치 추적",
+              "description": "반려견이 설정된 경계를 넘어 탈출하면 즉시 경고하고, Google Maps를 통해 현재 위치를 실시간으로 추적할 수 있습니다.<br/> 반려견의 안전을 지킬 수 있는 믿음직한 도우미입니다."
+            },
+            {
+              "title": "📱 사용자 관리 시스템",
+              "description": "Firebase를 활용한 안전한 사용자 인증 및 데이터 저장을 통해 개인 정보를 보호합니다.<br/>쉽게 회원가입하고 필요한 정보를 관리할 수 있어요."
+            },
+            {
+              "title": "📊 최근 알림 확인 및 푸시 알림",
+              "description": "반려견의 행동에 대한 최근 알림을 쉽게 확인할 수 있으며,<br/>중요한 사건 발생 시 푸시 알림을 통해 즉시 사용자에게 알려줍니다."
+            },
+            {
+              "title": "🌌 청각장애인을 위한 맞춤형 솔루션",
+              "description": "Space Dog는 청각장애인이 반려견을 안전하고 편리하게 돌볼 수 있도록 설계되었습니다.<br/>이제 걱정 없이 소중한 반려견과 소통할 수 있는 기회를 제공합니다."
+            }
+          ]
+        },
+        "techstack": ["Flutter", "Firebase", "Flask", "Spring", "Colab", "OpenCV", "Google Cloud", "Google Maps"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "1.2",
+            "date": "2024.08.03",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/spacedog/spacedog-m1.png",
+            "name": "이지수",
+            "role": "FE / DB / Design",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/spacedog/spacedog-m2.png",
+            "name": "장혜정",
+            "role": "BE/ DB / AI",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/spacedog/spacedog-m3.png",
+            "name": "유채림",
+            "role": "Circuit Design",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/spacedog/spacedog-m4.png",
+            "name": "양지훈",
+            "role": "3D Modeling",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

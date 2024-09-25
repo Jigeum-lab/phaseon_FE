@@ -1,0 +1,246 @@
+{
+  "data": {
+    "projectname": "ATTI",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "치매환자를 위한 기억의 회상과 기록 솔루션",
+      "description": "음성봇 ATTI가 “과거의 중요한 기억을 잊어버리는 것 \", \"일상생활에서 기억해야 할 것을 잊어버리는 것\"으로 구분지어 과거의 의미있는 기억을 떠올리고 현재와 미래에 규칙적인 생활을 구축할 수 있도록 도와줘요."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "0Y95Mzpib4I",
+            "type": "video"
+          },
+          {
+            "img": "png/atti/atti-carousel1.png",
+            "type": "row"
+          },
+          {
+            "img": "png/atti/atti-carousel2.png",
+            "type": "row"
+          },
+          {
+            "img": "png/atti/atti-carousel3.png",
+            "type": "row"
+          },
+          {
+            "img": "png/atti/atti-carousel4.png",
+            "type": "row"
+          },
+          {
+            "img": "png/atti/atti-carousel5.png",
+            "type": "row"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "ATTI는 우리의 기억을 도와주는 친구예요. 어떤 기능들이 있는지 한번 볼까요?",
+          "feature": [
+            {
+              "title": "마음 속 이야기 나누기",
+              "description": "우리랑 얘기하면서 소중한 기억들을 기록해요.<br/>기분이 어떤지, 무엇을 기억하고 싶은지 ATTI가 들어줄 거예요.<br/>이야기하다 보면 마음도 가벼워지고 기억도 더 잘 남겠죠?"
+            },
+            {
+              "title": "일상 속 작은 도우미",
+              "description": "우리랑 얘기하면서 소중한 기억들을 기록해요.<br/>기분이 어떤지, 무엇을 기억하고 싶은지 ATTI가 들어줄 거예요.<br/>이야기하다 보면 마음도 가벼워지고 기억도 더 잘 남겠죠?"
+            },
+            {
+              "title": "오늘은 뭐하지?",
+              "description": "우리랑 얘기하면서 소중한 기억들을 기록해요.<br/>기분이 어떤지, 무엇을 기억하고 싶은지 ATTI가 들어줄 거예요.<br/>이야기하다 보면 마음도 가벼워지고 기억도 더 잘 남겠죠?"
+            },
+            {
+              "title": "추억 속으로 슝~",
+              "description": "우리랑 얘기하면서 소중한 기억들을 기록해요.<br/>기분이 어떤지, 무엇을 기억하고 싶은지 ATTI가 들어줄 거예요.<br/>이야기하다 보면 마음도 가벼워지고 기억도 더 잘 남겠죠?"
+            },
+            {
+              "title": "중요한 순간 저장소",
+              "description": "좋아하는 사진을 올리고, 그 사진에 이름이나 연도, 사람, 키워드를 추가해요.<br/>이렇게 하면 나중에도 소중한 순간들을 쉽게 찾아볼 수 있어요."
+            },
+            {
+              "title": "일상의 리듬 찾기",
+              "description": "매일 반복되는 일이나 좋아하는 활동을 루틴으로 등록해요.<br/>이름, 시간, 날짜, 사진까지 넣으면 나만의 일상 관리가 더 재미있어질 거예요."
+            },
+            {
+              "title": "알림 친구",
+              "description": "할 일이나 루틴 시간이 되면 ATTI가 알려줘요.<br/>이제 중요한 일을 잊어버리는 일은 없겠죠?"
+            },
+            {
+              "title": "보호자님, 걱정 덜어드려요",
+              "description": "보호자님들도 기억 회상 활동이나 루틴 완료 상태를 주간 보고서로 받아볼 수 있어요.<br/>이제 환자분들을 더 잘 이해하고 케어할 수 있겠죠?"
+            }
+          ]
+        },
+        "techstack": ["Firebase", "Flutter", "Gemini"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "1.2",
+            "date": "2024.08.03",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top3",
+            "award": "Google Solution Challenge TOP 3",
+            "certifyingAgency": "예시"
+          },
+          {
+            "badge": "Top10",
+            "award": "Google Solution Challenge TOP 10",
+            "certifyingAgency": "예시"
+          },
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          },
+          {
+            "badge": "PeopleChoice",
+            "award": "2024 창업중심대학 예비부문 협약",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": [
+          "Google Solution Challenge TOP 3",
+          "Google Solution Challenge TOP 10",
+          "Google Solution Challenge TOP 100",
+          "2024 창업중심대학 예비부문 협약"
+        ],
+        "news": [
+          {
+            "img": "https://via.placeholder.com/80",
+            "title": "[부경투데이] ‘구글 솔루션 챌린지’ 한국 최초 우승! (Korean team won 'Google for developers solution challenge' for the first time)",
+            "content": "구글이 개최하는 글로벌대회 ‘구글 솔루션 챌린지 2024(Google for Developers Solution Challenge 2024)’에서 한국 최초로 국립부경대학교 학생팀이 우승을 차지했다. 국립부경대 컴퓨터공학전공 이홍주, 박수정, 전주은, 공업디자인전공 이지은 학생팀은 전 세계 110여 개국, 2,000여 개 대학의 구글 학생 개발자 클럽(Google Developer Student Clubs) 학생들을 대상으로 열린 이번 대회에서 인도, 나이지리아 팀과 함께 최종 우승팀(TOP3)에 올랐다.",
+            "link": "https://www.pknu.ac.kr/main/51?action=view&no=716237"
+          },
+          {
+            "img": "https://via.placeholder.com/80",
+            "title": "[아주경제] 국립부경대생, 구글 솔루션 챌린지 우승 쾌거",
+            "content": "기사내용 기사 내용 기사내용 기사내용 기사내용기사내용 기사 내용 기사내용 기사내용 기사내용기사내용 기사 내용 기사내용 기사내용 기사내용기사내용 기사 내용 기사내용 기사내용 기사내용",
+            "link": "https://m.news.nate.com/view/20240710n31018"
+          },
+          {
+            "img": "https://via.placeholder.com/80",
+            "title": "[KBS] 부경대팀, ‘구글 솔루션 챌린지’ 한국 최초 우승",
+            "content": "기사내용 기사 내용 기사내용 기사내용 기사내용기사내용 기사 내용 기사내용 기사내용 기사내용기사내용 기사 내용 기사내용 기사내용 기사내용기사내용 기사 내용 기사내용 기사내용 기사내용",
+            "link": "https://n.news.naver.com/article/056/0011761612?sid=102"
+          },
+          {
+            "img": "https://via.placeholder.com/80",
+            "title": "[연합뉴스] 부경대팀, '구글 솔루션 챌린지' 우승",
+            "content": "기사내용 기사 내용 기사내용 기사내용 기사내용기사내용 기사 내용 기사내용 기사내용 기사내용기사내용 기사 내용 기사내용 기사내용 기사내용기사내용 기사 내용 기사내용 기사내용 기사내용",
+            "link": "https://www.yna.co.kr/view/AKR20240710118300051"
+          }
+        ]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/atti/atti-m1.png",
+            "name": "이홍주",
+            "role": "Front-End Developer",
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/atti/atti-m2.png",
+            "name": "박수정",
+            "role": "Front-End Developer",
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/atti/atti-m3.png",
+            "name": "전주은",
+            "role": "Front-End Developer",
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/atti/atti-m4.png",
+            "name": "이지은",
+            "role": "Designer",
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

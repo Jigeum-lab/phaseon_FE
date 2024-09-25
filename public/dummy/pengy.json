@@ -1,0 +1,198 @@
+{
+  "data": {
+    "projectname": "Pengy",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "일상에서 화재 위험을 쉽게 관리하고 예방하는 AI 친구",
+      "description": "Pengy는 ‘안전한 생활을 위한 화재 예방’이라는 슬로건 아래, 우리 주변에서 일어날 수 있는 화재 위험을 쉽게 이해하고 대처할 수 있도록 돕는 솔루션이에요. 많은 사람들이 일상적인 행동이 화재를 일으킬 수 있다는 사실을 잘 모르고 지나치곤 하죠. Pengy는 AI 기술을 활용해 여러분의 공간을 점검하고, 화재 안전에 대한 유용한 정보를 제공합니다. 이를 통해 화재를 멀리하고, 안전한 환경을 만드는 데 도움을 줄 거예요."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "cHLJiLGHlWs",
+            "type": "video"
+          },
+          {
+            "img": "png/pengy/pengy-carousel1.png",
+            "type": "row"
+          },
+          {
+            "img": "png/pengy/pengy-carousel2.png",
+            "type": "row"
+          },
+          {
+            "img": "png/pengy/pengy-carousel3.png",
+            "type": "row"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "AI기반 화재 예방 솔루션 Pengy! 그 재미있고 유용한 기능들을 살펴볼까요?",
+          "feature": [
+            {
+              "title": "🔥 내 공간 안전 점검",
+              "description": "여러분의 집이나 사무실 같은 공간을 등록하면, Pengy가 그곳의 화재 위험 요소를 분석해 맞춤형 안전 정보를 제공해요.<br/>“여기 조심하세요!”라는 경고를 받을 수 있답니다."
+            },
+            {
+              "title": "📚 재미있는 화재 안전 교육",
+              "description": "뉴스, 유튜브 영상, 그리고 유용한 팁 등 다양한 자료를 통해 화재 안전에 대해 배울 수 있어요.<br/>필요한 정보는 언제든지 쉽게 찾을 수 있답니다."
+            },
+            {
+              "title": "🔍 실시간 위험 감지",
+              "description": "Pengy는 카메라를 통해 주변의 위험 요소를 실시간으로 감지해요.<br/>“이 물체는 화재를 일으킬 수 있어요!”라는 알림을 통해 즉시 대처할 수 있게 도와줘요."
+            },
+            {
+              "title": "📈 온도 감지로 위험 평가",
+              "description": "온도계를 통해 공간의 화재 위험 수준을 측정하고, 이를 시각적으로 쉽게 확인할 수 있어요.<br/>“여기 좀 뜨거워요, 조심하세요!”와 같은 알림이 올 수 있어요."
+            },
+            {
+              "title": "💡 매일매일 화재 안전 팁",
+              "description": "여러분이 등록한 공간에 맞춘 화재 안전 팁을 매일 푸시 알림으로 보내줘요.<br/>“오늘은 이걸 체크해보세요!”라는 알림으로 안전을 챙길 수 있어요."
+            },
+            {
+              "title": "📝 간단한 안전 체크리스트",
+              "description": "각 공간에 맞는 안전 체크리스트를 제공해 주어서, 정기적으로 점검할 수 있도록 도와줘요.<br/>“이거 확인했나요?”라는 질문으로 안전을 잊지 않게 해준답니다."
+            }
+          ]
+        },
+        "techstack": [
+          "Flutter",
+          "YOLO v8",
+          "Firebase",
+          "Google Maps",
+          "Gemini",
+          "Django",
+          "MySQL",
+          "TensorFlow",
+          "Vertex AI"
+        ]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "1.2",
+            "date": "2024.08.03",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/pengy/pengy-m1.png",
+            "name": "박장현",
+            "role": "Back-End Developer / AI Developers",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/pengy/pengy-m2.png",
+            "name": "도수빈",
+            "role": "Back-End Developer / AI Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/pengy/pengy-m3.png",
+            "name": "Byeori Moon",
+            "role": "Front-End Developer / Designer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/pengy/pengy-m3.png",
+            "name": "박준형",
+            "role": "Front-End Developer / AI Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

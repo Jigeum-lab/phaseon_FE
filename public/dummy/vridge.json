@@ -1,0 +1,180 @@
+{
+  "data": {
+    "projectname": "VRIDGE",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "언어 장애인을 위한 나만의 목소리를 만들어주는 특별한 음성 합션 솔루션",
+      "description": "VRIDGE는 언어 장애인을 위해 개발된 음성 합성 애플리케이션입니다. 이 솔루션은 사용자가 가족의 목소리를 기반으로 자신만의 고유한 목소리를 생성하여, 보다 자연스럽고 감정이 담긴 대화를 나눌 수 있도록 돕습니다. 대화를 통한 소통은 가족이나 친구와의 관계를 더욱 깊게 만들며, 단순한 텍스트 메시지를 넘어 실제 음성을 통한 의사소통의 기회를 제공합니다."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "png/vridge/vridge-carousel1.png",
+            "type": "row"
+          },
+          {
+            "img": "png/vridge/vridge-carousel2.png",
+            "type": "row"
+          },
+          {
+            "img": "png/vridge/vridge-carousel3.png",
+            "type": "row"
+          },
+          {
+            "img": "png/vridge/vridge-carousel4.png",
+            "type": "row"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "언어 장애인을 위한 나만의 목소리를 만들어주는 VRIDGE! 그 기능들을 함께 알아볼까요?",
+          "feature": [
+            {
+              "title": "🗣️ 개인 맞춤형 음성 합성",
+              "description": "사용자가 가족의 목소리를 입력하면, 그 목소리를 기반으로 자신만의 고유한 음성을 생성할 수 있어요.<br/>이렇게 생성된 목소리를 통해 더 따뜻하고 감정이 담긴 대화를 나눌 수 있답니다."
+            },
+            {
+              "title": "🤖 손쉬운 모바일 어플리케이션",
+              "description": "Android 기반의 애플리케이션을 통해 언제 어디서나 손쉽게 접근하고 사용할 수 있어요.<br/>“이제 내 목소리로 이야기해볼까요?”라는 느낌으로 간편하게 소통할 수 있습니다."
+            },
+            {
+              "title": "📞 실시간 음성 생성",
+              "description": "사용자가 입력한 문장을 즉시 음성 파일로 변환하여, 즉각적으로 대화에 참여할 수 있도록 도와줘요.<br/>“이 문장을 내 목소리로 만들어볼까요?”라는 느낌으로 원활한 소통을 지원합니다."
+            },
+            {
+              "title": "🤝 소통의 불평등 해소",
+              "description": "VRIDGE는 언어 장애인들이 가족, 친구와의 의사소통을 더욱 원활하게 할 수 있도록 돕습니다.<br/>이를 통해 소통의 불평등을 줄이고, 모두가 평등하게 대화할 수 있는 기회를 제공합니다."
+            }
+          ]
+        },
+        "techstack": ["Android", "Firebase", "Spring", "Google Cloud"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "1.2",
+            "date": "2024.08.03",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/vridge/vridge-m1.png",
+            "name": "유용민",
+            "role": "Android-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/vridge/vridge-m2.png",
+            "name": "고지훈",
+            "role": "AI Developer / ML",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/vridge/vridge-m3.png",
+            "name": "임용지",
+            "role": "Back-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/vridge/vridge-m4.png",
+            "name": "이동훈",
+            "role": "Android-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

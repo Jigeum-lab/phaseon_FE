@@ -1,0 +1,196 @@
+{
+  "data": {
+    "projectname": "PathPal",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "시각 장애인을 위한 안전한 보행을 지원하는 AI 기반 내비게이션 서비스",
+      "description": "PathPal은 ‘안전한 길을 안내하다’라는 슬로건 아래, 시각 장애인이 편안하게 길을 찾을 수 있도록 돕는 솔루션이에요! AI 기술을 활용해 주변 환경을 인식하고, 음성과 진동으로 사용자에게 실시간 정보를 제공하여 안전하게 목적지에 도착할 수 있도록 지원합니다."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "7HeddwSCQK8",
+            "type": "video"
+          },
+          {
+            "img": "png/pathpal/pathpal-carousel1.png",
+            "type": "row"
+          },
+          {
+            "img": "png/pathpal/pathpal-carousel2.png",
+            "type": "row"
+          },
+          {
+            "img": "png/pathpal/pathpal-carousel3.png",
+            "type": "row"
+          },
+          {
+            "img": "png/pathpal/pathpal-carousel4.png",
+            "type": "row"
+          },
+          {
+            "img": "png/pathpal/pathpal-carousel5.png",
+            "type": "row"
+          },
+          {
+            "img": "png/pathpal/pathpal-carousel6.png",
+            "type": "row"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "AI 음성 안내 및 진동 피드백 기능으로 시각 장애인의 안전한 보행을 돕는 PathPal! 그 기능들을 함께 알아볼까요?",
+          "feature": [
+            {
+              "title": "🚶‍♂️ 안전한 길 안내",
+              "description": "사용자가 출발지를 입력하면, 음성과 진동으로 길을 안내해요.<br/>길을 걷는 동안 주변 물체와 위험 요소에 대한 정보를 지속적으로 제공받을 수 있어요."
+            },
+            {
+              "title": "🗺️ 현재 위치 확인",
+              "description": "시간으로 현재 위치와 방향을 알려줘요.<br/>나침반 기능을 통해 사용자가 올바른 방향으로 나아갈 수 있도록 도와줍니다."
+            },
+            {
+              "title": "📱 손쉬운 음성 검색",
+              "description": "음성으로 출발지와 목적지를 쉽게 검색할 수 있어요.<br/>복잡한 터치 없이 간편하게 길을 찾을 수 있답니다."
+            },
+            {
+              "title": "🔍 주변 물체 인식",
+              "description": "카메라를 통해 주변의 물체를 인식하고, 음성으로 해당 물체의 위치와 정보를 안내해요.<br/>예를 들어, 벤치나 횡단보도 같은 중요한 지점을 쉽게 알아차릴 수 있어요."
+            },
+            {
+              "title": "⚠️ 위험 감지 알림",
+              "description": "장애물이나 위험 요소가 감지되면 진동으로 경고해요.<br/>사용자가 안전하게 보행할 수 있도록 지속적으로 주의를 기울입니다."
+            }
+          ]
+        },
+        "techstack": ["Swift", "SpringBoot", "Firebase", "Google Maps", "Google STT", "Google TTS", "Google Analytics"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "1.2",
+            "date": "2024.08.03",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/pathpal/pathpal-m1.png",
+            "name": "이수지",
+            "role": "Pm / ios",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/pathpal/pathpal-m2.png",
+            "name": "신은빈",
+            "role": "AL / ML",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/pathpal/pathpal-m3.png",
+            "name": "홍승택",
+            "role": "Back-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/pathpal/pathpal-m4.png",
+            "name": "김여원",
+            "role": "Designer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

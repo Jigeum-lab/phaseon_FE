@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "title": "ATTI",
+      "summary": "치매환자를 위한 기억의 회상과 기록 솔루션",
+      "shortDescription": "음성봇 ATTI가 “과거의 중요한 기억을 잊어버리는 것, \"일상생활에서 기억해야 할 것을 잊어버리는 것\"으로 구분지어 과거의 의미있는 기억을 떠올리고 현재와 미래에 규칙적인 생활을 구축할 수 있도록 도와줘요.",
+      "description": "## 01. DurgBox 기능 소개\n> 집에 있는 모든 약을 한눈에! DrugBox로 복용과 유통기한 걱정 없이 건강을 지키세요.\n\n**🧳 스마트 응급키트 관리**\n- **약품 위치 추적**: 어떤 약이 어디에 있는지 쉽게 찾을 수 있어요.\n- **재고 관리**: 남은 약의 수량을 실시간으로 체크할 수 있어요.\n- **키트 초대 기능**: 가족이나 친구를 키트에 초대해 함께 관리할 수 있어요.\n\n**💊 약품 정보 도우미**\n- **상세 정보 제공**: 약품을 추가할 때 약의 설명을 볼 수 있어요.\n- **안전한 복용**: 정확한 정보로 올바른 약 사용을 도와드려요.\n\n**⏰ 똑똑한 유통기한 관리**\n- **사전 알림 서비스**: 유통기한이 임박하거나 지난 경우 자동으로 알려드려요.\n- **폐기 대상 자동 분류**: 유통기한이 지난 약은 자동으로 폐기 약품 목록에 추가돼요.\n\n**♻️ 친환경 폐약 처리 가이드**\n- **올바른 처리 방법**: 폐기할 약품을 올바른 방법으로 처리하도록 안내해드려요.\n- **리워드 시스템**: 올바른 폐기를 실천하면 보상을 받을 수 있어요.\n- **환경 보호 동참**: 작은 실천으로 환경 보호에 동참해보세요!\n\n**🗺️ 편리한 수거함 찾기**\n- **위치 기반 서비스**: 내 위치 주변의 폐의약품 처리 장소를 찾아볼 수 있어요.\n- **편리한 검색**: 필요할 때 언제든 가까운 수거함을 찾을 수 있어요.\n## 02. DurgBox 주요 기술\n`Google Cloud` `MySQL` `Spring Boot` `iOS`\n",
+      "thumbnail": "https://namju.store:8443/images/default-thumbnail.png",
+      "banner": "https://namju.store:84438080/images/default-banner.png",
+      "categories": ["AI", "ENTERTAINMENT", "HEALTH"],
+      "status": "PHASE_0",
+      "projectMedia": [
+        {
+          "url": "0Y95Mzpib4I",
+          "mediaType": "video",
+          "order": 0
+        },
+        {
+          "url": "png/atti/atti-carousel1.png",
+          "mediaType": "row",
+          "order": 0
+        },
+        {
+          "url": "png/atti/atti-carousel2.png",
+          "mediaType": "row",
+          "order": 0
+        },
+        {
+          "url": "png/atti/atti-carousel3.png",
+          "mediaType": "row",
+          "order": 0
+        },
+        {
+          "url": "png/atti/atti-carousel4.png",
+          "mediaType": "row",
+          "order": 0
+        },
+        {
+          "url": "png/atti/atti-carousel5.png",
+          "mediaType": "row",
+          "order": 0
+        }
+      ],
+      "links": [
+        {
+          "link": "www.facebook.com",
+          "type": "INSTARGRAM"
+        },
+        {
+          "link": "www.github.com",
+          "type": "GITHUB"
+        },
+        {
+          "link": "www.twitter.com",
+          "type": "ETC"
+        },
+        {
+          "link": "www.google.com",
+          "type": "GOOGLE_PLAY"
+        }
+      ],
+      "viewCount": 0,
+      "likeCount": 0,
+      "notificationCount": 0,
+      "isLiked": false,
+      "isNotified": false,
+      "createdAt": 1704110400,
+      "updatedAt": 1704110400
+    }
+  ],
+  "error": null
+}

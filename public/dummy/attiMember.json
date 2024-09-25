@@ -1,0 +1,130 @@
+{
+  "success": true,
+  "data": {
+    "users": [
+      {
+        "userPicture": "png/atti/atti-m1.png",
+        "username": "박수정",
+        "userRole": "DEVELOPER_BACKEND",
+        "links": [
+          {
+            "linkType": "INSTARGRAM",
+            "url": "21"
+          },
+          {
+            "linkType": "GITHUB",
+            "url": "23"
+          },
+          {
+            "linkType": "AAAAA",
+            "url": "45"
+          }
+        ]
+      },
+      {
+        "userPicture": "png/atti/atti-m1.png",
+        "username": "박수정",
+        "userRole": "DEVELOPER_BACKEND",
+        "links": [
+          {
+            "linkType": "TWITTER",
+            "url": "12"
+          },
+          {
+            "linkType": "LINKEDIN",
+            "url": "43"
+          },
+          {
+            "linkType": "YOUTUBE",
+            "url": "56"
+          }
+        ]
+      },
+      {
+        "userPicture": "png/atti/atti-m1.png",
+        "username": "박수정",
+        "userRole": "DEVELOPER_BACKEND",
+        "links": [
+          {
+            "linkType": "INSTARGRAM",
+            "url": "11"
+          },
+          {
+            "linkType": "INSTARGRAM",
+            "url": "1111"
+          },
+          {
+            "linkType": "INSTARGRAM",
+            "url": "11111"
+          }
+        ]
+      },
+      {
+        "userPicture": "png/atti/atti-m1.png",
+        "username": "박수정",
+        "userRole": "DEVELOPER_BACKEND",
+        "links": [
+          {
+            "linkType": "INSTARGRAM",
+            "url": "22"
+          },
+          {
+            "linkType": "INSTARGRAM",
+            "url": "24"
+          },
+          {
+            "linkType": "INSTARGRAM",
+            "url": "42"
+          }
+        ]
+      },
+      {
+        "userPicture": "png/atti/atti-m1.png",
+        "username": "박수정",
+        "userRole": "DEVELOPER_BACKEND",
+        "links": [
+          {
+            "linkType": "INSTARGRAM",
+            "url": "222"
+          },
+          {
+            "linkType": "INSTARGRAM",
+            "url": "244"
+          },
+          {
+            "linkType": "INSTARGRAM",
+            "url": "422"
+          }
+        ]
+      },
+      {
+        "userPicture": "png/atti/atti-m1.png",
+        "username": "박수정",
+        "userRole": "DEVELOPER_BACKEND",
+        "links": [
+          {
+            "linkType": "INSTARGRAM",
+            "url": "227"
+          },
+          {
+            "linkType": "INSTARGRAM",
+            "url": "247"
+          },
+          {
+            "linkType": "INSTARGRAM",
+            "url": "427"
+          }
+        ]
+      }
+    ]
+  },
+  "error": {
+    "code": "string",
+    "message": "string",
+    "properties": {
+      "additionalProp1": {},
+      "additionalProp2": {},
+      "additionalProp3": {}
+    }
+  }
+}

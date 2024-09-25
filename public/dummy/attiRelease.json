@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "ce26e6f3-15f5-46a0-b2bf-41a8bfc627e8",
+      "title": "Release 2",
+      "description": "R## Release 1.1\n>2024.07.12\n\n### ~~기능 추가\n 기능 추가",
+      "createdAt": "2024-01-02T12:00:00Z"
+    },
+    {
+      "id": "b8e78a8e-a312-4520-b304-166287052249",
+      "title": "Release 1",
+      "description": "## Release 1.1\n>2024.07.12\n\n### ~~기능 추가\n 기능 추가",
+      "createdAt": "2024-01-01T12:00:00Z"
+    }
+  ],
+  "error": {
+    "code": "string",
+    "message": "string",
+    "properties": {
+      "additionalProp1": {},
+      "additionalProp2": {},
+      "additionalProp3": {}
+    }
+  }
+}

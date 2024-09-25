@@ -1,0 +1,172 @@
+{
+  "data": {
+    "projectname": "PlogUs",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "플로깅 활동을 통해 환경과 건강 모두를 지킬 수 있는 프로젝트",
+      "description": "PlogUs 어플리케이션은 환경을 지키고 건강한 라이프스타일을 즐기는 사람들을 위한 해결책이에요. 이 어플리케이션을 통해 우리는 함께 환경을 개선하고 더 나은 미래를 만들어 나갈 수 있습니다."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "12oGd0Vch5g",
+            "type": "video"
+          },
+          {
+            "img": "png/plogus/plogus-carousel1.png",
+            "type": "row"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "PlogUs는 환경을 보호하고 건강한 라이프스타일을 지원하는 친구예요. 어떤 기능들이 있는지 함께 살펴볼까요?",
+          "feature": [
+            {
+              "title": "AI를 활용한 쓰레기 분리 가이드",
+              "description": "사용자가 주운 쓰레기의 사진을 찍으면, PlogUs가 쓰레기 분리에 대한 상세한 지침을 제공해요.<br/>이를 통해 환경 오염을 줄이고 지속 가능한 재활용 문화를 촉진하고 기대할 수 있어요! "
+            },
+            {
+              "title": "플로깅 경로 추천 (구글 맵 API 활용)",
+              "description": "약물의 설명과 복용방법을 알려줘요.<br/>어플속 구급상자에 약을 추가할 경우 약물의 복용방법과 어떤 약물인지 설명해줘요!"
+            },
+            {
+              "title": "플로깅 포인트 적립",
+              "description": "PlogUs는 사용자의 활동에 따라 포인트를 적립할 수 있게 해줘요.<br/>이 포인트는 다양한 보상으로 교환할 수 있어 지속 가능한 소비나 보존 활동을 유도해요!"
+            },
+            {
+              "title": "매일의 플로깅 퀴즈",
+              "description": "매일 다양한 주제로 제공되는 플로깅 퀴즈는 사용자가 환경 보호에 대한 지식을 향상시킬 수 있도록 도와줘요.<br/>이를 통해 사용자들은 자신의 역할을 인식하고 더 나은 환경을 위해 행동할 수 있게 되어요!"
+            }
+          ]
+        },
+        "techstack": ["Springboot", "Google Cloud", "MySQL", "Docker", "TensorFlow", "CoLab", "Keras", "Flutter"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "0.0",
+            "date": "0000.00.00",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/plogus/plogus-m1.png",
+            "name": "길수민",
+            "role": "Front-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/plogus/plogus-m2.png",
+            "name": "백승효",
+            "role": "Front-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/plogus/plogus-m3.png",
+            "name": "윤채은",
+            "role": "Back-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/plogus/plogus-m4.png",
+            "name": "최세인",
+            "role": "ML Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

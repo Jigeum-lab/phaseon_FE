@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "data": {
+    "accomplishments": [
+      {
+        "id": "85a0fda6-9ef2-4ac6-847a-033e68d40bdb",
+        "title": "Accomplishment 1",
+        "publisher": "Google",
+        "thumbnail": "/images/accomplishment1.jpg"
+      }
+    ],
+    "certifications": [
+      {
+        "id": "a82636af-e5a5-4314-ad1e-8cfe79793392",
+        "title": "CERTIFICATE 3",
+        "thumbnail": "/images/accomplishment3.jpg"
+      }
+    ],
+    "news": [
+      {
+        "id": "bb179aab-5b40-4300-b50f-4402846f50d5",
+        "title": "NEWS 2",
+        "description": "Accomplishment 2 Description",
+        "link": "https://www.google.com",
+        "thumbnail": "/images/accomplishment2.jpg"
+      },
+      {
+        "id": "498c35fa-84b4-435a-b8e4-91f770577bec",
+        "title": "news 4",
+        "description": "Accomplishment 4 Description",
+        "link": "https://www.google.com",
+        "thumbnail": "/images/accomplishment4.jpg"
+      }
+    ]
+  },
+  "error": {
+    "code": "string",
+    "message": "string",
+    "properties": {
+      "additionalProp1": {},
+      "additionalProp2": {},
+      "additionalProp3": {}
+    }
+  }
+}

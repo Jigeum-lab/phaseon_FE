@@ -1,0 +1,188 @@
+{
+  "data": {
+    "projectname": "fluentify",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "청각 장애 아동의 의사소통 문제를 해결하는 솔루션",
+      "description": "개인화된 발음 피드백을 제공하여 의사소통에 대한 자신감을 높이고 사회적 포용성을 증진하는 것을 목표로 합니다."
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "5v3-PxTcWEM",
+            "type": "video"
+          },
+          {
+            "img": "png/fluentify/fluentify-carousel1.png",
+            "type": "row"
+          },
+          {
+            "img": "png/fluentify/fluentify-carousel2.png",
+            "type": "row"
+          },
+          {
+            "img": "png/fluentify/fluentify-carousel3.gif",
+            "type": "col"
+          },
+          {
+            "img": "png/fluentify/fluentify-carousel4.gif",
+            "type": "col"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "의사소통 능력을 향상시키는 데 도움을 주는 fluentify! 어떤 기능들이 있는지 함께 살펴볼까요?",
+          "feature": [
+            {
+              "title": "🎤 개인화된 발음 피드백 제공",
+              "description": "사용자가 자신의 발음을 녹음하면, AI가 맞춤형 피드백을 줘요.<br/>이렇게 하면 발음이 더 정확해지고, 자신감도 쑥쑥 올라간답니다! "
+            },
+            {
+              "title": "🗣️ 의사소통 자신감 향상",
+              "description": "fluentify는 아동들이 자신의 목소리를 듣고 수정할 수 있도록 도와줘요.<br/>덕분에 의사소통에 대한 두려움이 줄어들고, 더 적극적으로 소통할 수 있게 된답니다."
+            },
+            {
+              "title": "🌈 사회적 포용성 촉진",
+              "description": "이 애플리케이션은 장애 아동의 사회적 상호작용을 늘려줘요.<br/>모두가 함께하는 포용적인 환경을 만드는 데 기여할 수 있어요."
+            },
+            {
+              "title": "📚 다양한 학습 세션",
+              "description": "각 학습 세션은 여러 가지 발음 연습으로 구성되어 있어요.<br/>사용자가 지속적으로 피드백을 받고 성장할 수 있는 기회를 제공한답니다."
+            },
+            {
+              "title": "🌐 클라우드 기반 맞춤형 피드백",
+              "description": "사용자는 클라우드에 업로드된 오디오 파일을 통해 개인화된 피드백을 받을 수 있어요.<br/>언제 어디서나 학습할 수 있는 유연함을 제공한답니다. "
+            }
+          ]
+        },
+        "techstack": ["Docker", "Firebase", "Flutter", "Gemini"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "0.0",
+            "date": "0000.00.00",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/fluentify/fluentify-m1.png",
+            "name": "강민서",
+            "role": "Front-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/fluentify/fluentify-m2.png",
+            "name": "유회성",
+            "role": "Back-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/fluentify/fluentify-m3.png",
+            "name": "임채림",
+            "role": "Back-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/fluentify/fluentify-m4.png",
+            "name": "김주연",
+            "role": "ML Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "data": {
+    "projectname": "Drug Box",
+    "star": 3,
+    "notification": 3,
+    "category": ["건강 및 피트니스", "접근성"],
+    "floatmenu": {
+      "view": 0,
+      "phase": 0,
+      "buttons": [
+        {
+          "icon": "https://via.placeholder.com/16",
+          "buttontext": "인스타그램",
+          "link": ""
+        }
+      ],
+      "releasenote": "No releases published",
+      "isLiked": false,
+      "isNotified": false
+    },
+    "intro": {
+      "banner": "img",
+      "projectimg": "img",
+      "projectbrief": "의약품의 올바른 관리 및 폐기를 도와주는 솔루션",
+      "description": "일반의약품과 처방약의 재고와 유통기한 관리 지침을 제공하며, 폐기 약물의 올바른 처리 방법을 안내해줘요. 우리 솔루션을 통해 부적절한 폐기 방법으로 인한 문제를 해결하고, 나아가 불필요한 의약품 사용을 줄여 개인과 환경의 건강을 증진시켜보세요!"
+    },
+    "menu": {
+      "projectinfo": {
+        "carousel": [
+          {
+            "img": "nOnOSi51t-M",
+            "type": "video"
+          },
+          {
+            "img": "png/drugbox/drugbox-carousel1.png",
+            "type": "row"
+          },
+          {
+            "img": "png/drugbox/drugbox-carousel2.png",
+            "type": "row"
+          },
+          {
+            "img": "png/drugbox/drugbox-carousel3.png",
+            "type": "row"
+          },
+          {
+            "img": "png/drugbox/drugbox-carousel4.png",
+            "type": "row"
+          }
+        ],
+        "mainfeatures": {
+          "shortdescription": "당신이 필요한 약을 찾거나, 만료된 약을 어떻게 처리할지 고민해본 적이 있나요? Drugbox는 여러분의 약을 책임져 줍니다!",
+          "feature": [
+            {
+              "title": "약이 어디에 얼마나 있었지?",
+              "description": "잊고있던 구급상자의 물품을 관리할 수 있도록 도와줘요.<br/>구급상자를 처음에 등록하여 약을 추가하면 어떤 약이 어디에, 얼마나 있는 지 언제든지 확인이 가능해요!"
+            },
+            {
+              "title": "내 손안의 약사",
+              "description": "약물의 설명과 복용방법을 알려줘요.<br/>어플속 구급상자에 약을 추가할 경우 약물의 복용방법과 어떤 약물인지 설명해줘요!"
+            },
+            {
+              "title": "약에도 유효기간이?",
+              "description": "유효기간이 지났거나 임박한 약의 경우 자동으로 알려줘요.<br/>구급상자 속 잊고있던 약의 유통기한이 다다른 경우 목록을 통해 알 수 있고 Drugbox가 여러분에게 알려주기도 한답니다."
+            },
+            {
+              "title": "그래서 어디에 버리나요?",
+              "description": "주변에 폐기할 약물을 처리할 수 있는 장소를 볼 수 있어요.<br/>약을 어디에 폐기해야할지 리스트를 통해 확인할 수 있고 올바른 방법으로 약물을 버릴경우 보상을 받을 수도 있습니다!"
+            }
+          ]
+        },
+        "techstack": ["Swift", "Google Cloud", "MySQL", "Springboot"]
+      },
+      "release": {
+        "releaseversion": [
+          {
+            "version": "1.2",
+            "date": "2024.08.03",
+            "extrafeature": [
+              {
+                "feature": "비어있음",
+                "description": "비어있음"
+              }
+            ]
+          }
+        ]
+      },
+      "performance": {
+        "certifiedaward": [
+          {
+            "badge": "Top100",
+            "award": "Google Solution Challenge TOP 100",
+            "certifyingAgency": "예시"
+          }
+        ],
+        "accomplishment": ["Google Solution Challenge TOP 100"]
+      },
+      "introduction": {
+        "members": [
+          {
+            "img": "png/drugbox/drugbox-m1.png",
+            "name": "김범준",
+            "role": "AI Engineer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/drugbox/drugbox-m2.png",
+            "name": "권보민",
+            "role": "Back-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/drugbox/drugbox-m3.png",
+            "name": "김도연",
+            "role": "ios Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          },
+          {
+            "img": "png/drugbox/drugbox-m4.png",
+            "name": "김미주",
+            "role": "Back-End Developer",
+
+            "profilelink": [
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              },
+              {
+                "icon": "instargram",
+                "link": ""
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
