@@ -68,7 +68,7 @@ export default function FloatingBox({ setShowModal }: { setShowModal: React.Disp
       <s.ImgBox>
         <s.Title>주요 성과</s.Title>
         <div>
-          {accomplishmentInfo.data.accomplishments.map((awardObj, index) => {
+          {accomplishmentInfo.accomplishments.map((awardObj, index) => {
             if (index < 5) {
               return <s.Img key={awardObj.title + index} src={awardObj.thumbnail} alt="" />;
             }
@@ -87,7 +87,7 @@ export default function FloatingBox({ setShowModal }: { setShowModal: React.Disp
         <div>
           {memberInfo.users.map((memberObj, index) => {
             if (index < 5) {
-              return <s.Img src={`/public/${memberObj.userPicture}`} alt="" key={index} />;
+              return <s.Img src={`${memberObj.userPicture}`} alt="" key={index} />;
             }
           })}
         </div>
