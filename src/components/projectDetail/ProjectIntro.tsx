@@ -101,7 +101,7 @@ export default function ProjectIntro() {
 
 async function getData(updateData: Updater<ProjectInfo>, id: string) {
   try {
-    const response = await fetch(`http://cmsong111.iptime.org:8080/api/v1/projects/${id}`);
+    const response = await fetch(`hhttps://name.store:8443/api/project/${id}`);
     // const response = await fetch('/public/dummy/atti2.json');
     const data = await response.json();
     updateData((obj) => {
@@ -114,7 +114,7 @@ async function getData(updateData: Updater<ProjectInfo>, id: string) {
 
 async function getMember(updateData: Updater<Member>, id: string) {
   try {
-    const response = await fetch(`http://cmsong111.iptime.org:8080/api/v1/projects/${id}/members`);
+    const response = await fetch(`hhttps://name.store:8443/api/project/${id}/members`);
     // const response = await fetch('/dummy/attiMember.json');
     const data = await response.json();
     updateData((obj) => {
@@ -127,7 +127,7 @@ async function getMember(updateData: Updater<Member>, id: string) {
 
 async function getAccomplishment(updateAccomplishmentInfo: Updater<Accomplishment>, id: string) {
   try {
-    const response = await fetch(`http://cmsong111.iptime.org:8080/api/v1/projects/${id}/accomplishments`);
+    const response = await fetch(`hhttps://name.store:8443/api/project/${id}/accomplishments`);
     // const response = await fetch('dummy/attiPerformance.json');
     const data = await response.json();
     updateAccomplishmentInfo((draft) => {
