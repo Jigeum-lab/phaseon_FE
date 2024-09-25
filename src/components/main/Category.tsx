@@ -40,7 +40,6 @@ export default function Category() {
       <s.CategoryBox>
         {category.categorytext.map((text, index) => {
           const iconName = icons[index] as IconProps['name'];
-          console.log(iconName, index, currentCategory);
           return (
             <s.Category
               key={index}
