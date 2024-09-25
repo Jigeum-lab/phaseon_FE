@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { Icon } from '@/components/common/Icon';
 
 export const Header = styled.header`
-  padding: 0 min(170px, calc(70px + ((100vw - 1200px) / 2)));
+  padding: 0 calc(50px + ((100vw - 1200px) / 2));
   width: 100%;
-  height: 66px;
+  height: 60px;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(207, 235, 255, 0.7);
   display: flex;
@@ -15,8 +15,8 @@ export const NavigationBox = styled.section<{ width: number }>`
   width: ${({ width }) => `${width}px`};
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 20px;
 `;
 
 export const SvgIcon = styled(Icon)`
@@ -28,6 +28,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 `;
 
 export const IconBox = styled.div<{ color: string }>`
@@ -36,21 +37,23 @@ export const IconBox = styled.div<{ color: string }>`
   display: flex;
   align-items: center;
   cursor: pointer;
+  gap: 4px;
 `;
 
 export const RegisterButton = styled.button`
-  padding: 9px 20px;
-  width: 78px;
-  height: 20px;
-  box-sizing: content-box;
+  padding: 7px 14px;
+  width: 97px;
+  height: 32px;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid #69acff;
-  color: #69acff;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   outline: none;
   background-color: rgba(255, 255, 255, 1);
+
+  color: #69acff;
+  font-size: 13px;
 
   &&:hover {
     background-color: #f7fbff;

@@ -89,11 +89,9 @@ export interface NewsObj {
 }
 
 export interface Accomplishment {
-  data: {
-    accomplishments: AccomplishmentObj[];
-    certifications: CertificationObj[];
-    news: NewsObj[];
-  };
+  accomplishments: AccomplishmentObj[];
+  certifications: CertificationObj[];
+  news: NewsObj[];
 }
 
 export interface Link {
