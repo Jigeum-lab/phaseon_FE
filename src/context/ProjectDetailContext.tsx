@@ -49,9 +49,9 @@ const initialProjectInfo: ProjectInfo = {
 };
 
 const initialReleaseInfo: ReleaseType = {
-  data: [
+  projectReleases: [
     {
-      id: '',
+      id: 0,
       title: '',
       description: '',
       createdAt: '',

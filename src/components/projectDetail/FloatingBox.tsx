@@ -87,7 +87,7 @@ export default function FloatingBox({ setShowModal }: { setShowModal: React.Disp
         <div>
           {memberInfo.users.map((memberObj, index) => {
             if (index < 5) {
-              return <s.Img src={`${memberObj.userPicture}`} alt="" key={index} />;
+              return <s.Img src={memberObj.userPicture} alt="" key={index} />;
             }
           })}
         </div>

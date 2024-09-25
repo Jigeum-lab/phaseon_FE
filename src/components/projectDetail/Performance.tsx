@@ -14,7 +14,7 @@ export default function Performance() {
       <s.AwardBox>
         {accomplishmentInfo.accomplishments.map((awardObj, index) => (
           <s.Award key={index}>
-            <img src={awardObj.thumbnail} alt="" />
+            <s.AwardImg src={awardObj.thumbnail} alt="" />
             <s.AwardName>{awardObj.title}</s.AwardName>
             <s.Agency>{awardObj.publisher}</s.Agency>
           </s.Award>

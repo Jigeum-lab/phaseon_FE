@@ -15,7 +15,7 @@ export default function Release() {
 
   return (
     <s.Section>
-      {releaseInfo.data.map((releaseObj, index) => (
+      {releaseInfo.projectReleases.map((releaseObj, index) => (
         <s.ReleaseBox key={index}>
           <s.Title>{releaseObj.title}</s.Title>
           <s.ReleaseInformation>{releaseObj.description}</s.ReleaseInformation>
@@ -27,11 +27,11 @@ export default function Release() {
 
 async function getRelease(updateReleaseInfo: Updater<ReleaseType>, id: string) {
   try {
-    const response = await fetch(`https://name.store:8443/api/project/${id}/release`);
+    const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}/release`);
     // const response = await fetch('dummy/attiRelease.json');
     const data = await response.json();
     updateReleaseInfo((draft) => {
-      Object.assign(draft, data);
+      Object.assign(draft, data.data);
     });
   } catch (e) {
     console.log(e);
