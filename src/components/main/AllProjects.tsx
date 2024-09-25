@@ -7,6 +7,27 @@ import { useNavigate } from 'react-router-dom';
 export default function AllProjects() {
   const { project } = useContext(MainContext);
   const navigate = useNavigate();
+
+  const categoryMap = {
+    AI: '인공지능',
+    SOCIAL_MEDIA: '소셜 미디어',
+    PRODUCTIVITY: '협업 ・ 생산성',
+    HEALTH: '건강 ・ 의료',
+    TRAVEL: '여행',
+    SOCIAL_EFFECT: '소셜 이펙트',
+    ENTERTAINMENT: '엔터테이먼트',
+    PERSONAL_BRANDING: '퍼스널 브랜딩',
+    EDUCATION: '교육',
+  } as const;
+
+  type CategoryType = keyof typeof categoryMap;
+
+  function getCategoryText(categoryType: string) {
+    if (categoryType in categoryMap) {
+      return categoryMap[categoryType as CategoryType];
+    }
+  }
+
   return (
     <s.ProjectContainer>
       {project &&
@@ -40,9 +61,9 @@ export default function AllProjects() {
                 </s.IconBox>
               </s.InpoBox>
               <s.CategoryBox>
-                {projectObj.category.map((categoryText, idx2) => (
-                  <p key={idx2 + categoryText}>{categoryText}</p>
-                ))}
+                {projectObj.category.map((text, idx2) => {
+                  return <p key={idx2 + text}>{getCategoryText(text)}</p>;
+                })}
               </s.CategoryBox>
             </div>
           </s.ProjectBox>

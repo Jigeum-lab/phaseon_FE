@@ -9,7 +9,7 @@ export const Section = styled.section<{ $scroll: number }>`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: ${({ $scroll }) => $scroll - 66}px;
+  top: ${({ $scroll }) => $scroll - 60}px;
   left: 0;
   background-color: #00000072;
   z-index: 4;

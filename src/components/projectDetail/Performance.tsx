@@ -12,20 +12,20 @@ export default function Performance() {
         <s.ShortDescription>프로젝트 주요 성과</s.ShortDescription>
       </section>
       <s.AwardBox>
-        {accomplishmentInfo.data.accomplishments.map((awardObj, index) => (
+        {accomplishmentInfo.accomplishments.map((awardObj, index) => (
           <s.Award key={index}>
-            <img src={awardObj.thumbnail} alt="" />
+            <s.AwardImg src={awardObj.thumbnail} alt="" />
             <s.AwardName>{awardObj.title}</s.AwardName>
             <s.Agency>{awardObj.publisher}</s.Agency>
           </s.Award>
         ))}
         <s.Uncertifiedaward>
-          {accomplishmentInfo.data.certifications.map((awardObj, index) => (
+          {accomplishmentInfo.certifications.map((awardObj, index) => (
             <s.Li key={index + awardObj.title}>{awardObj.title}</s.Li>
           ))}
         </s.Uncertifiedaward>
       </s.AwardBox>
-      {accomplishmentInfo.data.news.length && <News data={accomplishmentInfo.data.news} />}
+      {accomplishmentInfo.news.length > 0 && <News data={accomplishmentInfo.news} />}
     </s.Section>
   );
 }

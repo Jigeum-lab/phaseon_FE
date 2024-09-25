@@ -12,7 +12,7 @@ export default function AllProjectView() {
   const { project, updateProject, currentCategory, category } = useContext(MainContext);
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(-1);
-  const [sortOption, setSortOption] = useState('updatedAt');
+  const [sortOption, setSortOption] = useState('createdAt');
   const [showMoreButton, setShowMoreButton] = useState(false);
   const [isPageUpdate, setIsPageUpdate] = useState(false);
   const isFetching = useRef<boolean>(false);
@@ -23,6 +23,7 @@ export default function AllProjectView() {
     'SOCIAL_MEDIA',
     'PRODUCTIVITY',
     'HEALTH',
+    'EDUCATION',
     'TRAVEL',
     'SOCIAL_EFFECT',
     'ENTERTAINMENT',
@@ -35,12 +36,13 @@ export default function AllProjectView() {
       | 'SOCIAL_MEDIA'
       | 'PRODUCTIVITY'
       | 'HEALTH'
+      | 'EDUCATION'
       | 'TRAVEL'
       | 'SOCIAL_EFFECT'
       | 'ENTERTAINMENT'
       | 'PERSONAL_BRANDING';
   }
-  const iconWithFill = [0, 2, 3, 4, 5, 6, 8];
+  const iconWithFill = [0, 2, 3, 4, 5, 6, 7, 9];
   const iconName = icons[currentCategory] as IconProps['name'];
 
   function handleObserver(entries: IntersectionObserverEntry[]) {
@@ -66,10 +68,20 @@ export default function AllProjectView() {
   }, [showMoreButton, isPageUpdate]);
 
   useEffect(() => {
-    if (page % 10 === 0 && page !== 0) {
-      setShowMoreButton(true);
+    setPage(-1);
+    isFetching.current = false;
+    updateProject((draft) => {
+      draft.data.totalMembers = 0;
+      draft.data.totalProjects = 0;
+      draft.data.projects = [];
+    });
+  }, [currentCategory, updateProject]);
+
+  useEffect(() => {
+    if (page === -1 && !isFetching.current) {
+      setPage(0);
+      return;
     }
-    if (page === -1 && !isFetching.current) return;
 
     getProjects(
       setIsLoading,
@@ -84,14 +96,12 @@ export default function AllProjectView() {
   }, [page, updateProject, showMoreButton, currentCategory, category.categoryicon, sortOption]);
 
   useEffect(() => {
-    setPage(-1);
-    isFetching.current = false;
-    updateProject((draft) => {
-      draft.data.totalMembers = 0;
-      draft.data.totalProjects = 0;
-      draft.data.projects = [];
-    });
-  }, [currentCategory, updateProject]);
+    if (page % 10 === 0 && page !== 0) {
+      setShowMoreButton(true);
+    } else {
+      setShowMoreButton(false);
+    }
+  }, [page]);
 
   return (
     <s.Section>
@@ -116,9 +126,9 @@ export default function AllProjectView() {
           <s.ButtonWrapper>
             <s.SortButton
               $current={sortOption}
-              $buttonName="updatedAt"
+              $buttonName="createdAt"
               onClick={() => {
-                setSortOption('updatedAt');
+                setSortOption('createdAt');
               }}
             >
               최신
@@ -170,10 +180,11 @@ async function getProjects(
 ) {
   setIsLoading(true);
   try {
-    let response = await fetch(`https://name.store:8443/api/project?page=${page}&sort=${sortOption}`);
+    let response = await fetch(`https://namju.store:8443/api/v1/projects?page=${page}&sort=${sortOption}`);
+
     if (currentCategory !== 'ALLPROJECT') {
       response = await fetch(
-        `https://name.store:8443/api/projects?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
+        `https://namju.store:8443/api/v1/projects?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
       );
     }
     // const response = await fetch('dummy/projectCollection.json');

@@ -9,7 +9,7 @@ export default function Share() {
   usePreventScroll(showShare);
 
   return (
-    <s.Section $scroll={window.screenY}>
+    <s.Section $scroll={window.scrollY}>
       <s.QRcodeBox>
         <s.CloseButton
           name="Close"

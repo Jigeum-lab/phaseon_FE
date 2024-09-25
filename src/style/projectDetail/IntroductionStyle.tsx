@@ -14,7 +14,6 @@ export const Section = styled.section`
 export const Profile = styled.div`
   padding: 16px 0;
   margin-bottom: 8px;
-  width: 188px;
   height: 148px;
   display: flex;
   flex-direction: column;

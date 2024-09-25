@@ -14,6 +14,7 @@ export default function Category() {
     'SOCIAL_MEDIA',
     'PRODUCTIVITY',
     'HEALTH',
+    'EDUCATION',
     'TRAVEL',
     'SOCIAL_EFFECT',
     'ENTERTAINMENT',
@@ -26,12 +27,13 @@ export default function Category() {
       | 'SOCIAL_MEDIA'
       | 'PRODUCTIVITY'
       | 'HEALTH'
+      | 'EDUCATION'
       | 'TRAVEL'
       | 'SOCIAL_EFFECT'
       | 'ENTERTAINMENT'
       | 'PERSONAL_BRANDING';
   }
-  const iconWithFill = [0, 2, 3, 4, 5, 6, 8];
+  const iconWithFill = [0, 2, 3, 4, 5, 6, 7, 9];
   return (
     <s.Section>
       <s.Title>카테고리</s.Title>

@@ -28,6 +28,13 @@ export const Award = styled.section`
   align-items: center;
 `;
 
+export const AwardImg = styled.img`
+  margin-bottom: 16px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+`;
+
 export const AwardName = styled.p`
   margin-bottom: 4px;
   color: #171719;
