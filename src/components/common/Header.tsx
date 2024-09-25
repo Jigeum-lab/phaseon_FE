@@ -34,11 +34,12 @@ export default function Header({ setShowModal }: { setShowModal: React.Dispatch<
       </s.NavigationBox>
       <s.NavigationBox width={214}>
         <s.SvgIcon name="Search" onClick={handleModal} />
+        <s.SvgIcon name="Notice" onClick={handleModal} />
+        <s.SvgIcon name="DefaultUserImg" width={32} height={32} onClick={handleModal} />
         <s.RegisterButton onClick={handleModal}>
           <s.SvgIcon name="Register" />
           등록하기
         </s.RegisterButton>
-        <s.SvgIcon name="DefaultUserImg" width={32} height={32} onClick={handleModal} />
       </s.NavigationBox>
     </s.Header>
   );
