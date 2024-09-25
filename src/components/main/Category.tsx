@@ -33,13 +33,14 @@ export default function Category() {
       | 'ENTERTAINMENT'
       | 'PERSONAL_BRANDING';
   }
-  const iconWithFill = [0, 2, 3, 4, 5, 6, 8];
+  const iconWithFill = [0, 2, 3, 4, 5, 6, 7, 9];
   return (
     <s.Section>
       <s.Title>카테고리</s.Title>
       <s.CategoryBox>
         {category.categorytext.map((text, index) => {
           const iconName = icons[index] as IconProps['name'];
+          console.log(iconName, index, currentCategory);
           return (
             <s.Category
               key={index}

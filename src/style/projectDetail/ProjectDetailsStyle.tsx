@@ -6,5 +6,5 @@ export const Div = styled.div`
   display: flex;
   justify-content: center;
   position: absolute;
-  right: min(190px, calc(70px + ((100vw - 1200px) / 2)));
+  right: calc(70px + ((100vw - 1200px) / 2));
 `;

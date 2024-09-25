@@ -58,7 +58,7 @@ export default function ProjectIntro() {
     }
   }
 
-  const iconWithFill = [2, 3, 4, 5, 6, 8, 9];
+  const iconWithFill = [2, 3, 4, 5, 6, 7, 9];
 
   useEffect(() => {
     getData(updateProjectInfo, id);
