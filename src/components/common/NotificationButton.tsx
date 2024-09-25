@@ -12,7 +12,7 @@ export default function NotificationButton({
   height: number;
   children?: React.ReactNode;
 }) {
-  const { projectInfo, updateProjectInfo } = useContext(ProjectDetailContext);
+  const { projectInfo, updateProjectInfo, setShowModal } = useContext(ProjectDetailContext);
   const [isNotified, setIsNotified] = useState(projectInfo.isNotified);
 
   return (

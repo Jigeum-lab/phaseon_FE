@@ -12,7 +12,7 @@ export default function StarButton({
   height: number;
   children?: React.ReactNode;
 }) {
-  const { projectInfo, updateProjectInfo } = useContext(ProjectDetailContext);
+  const { projectInfo, updateProjectInfo, setShowModal } = useContext(ProjectDetailContext);
   const [isLiked, setIsLiked] = useState(projectInfo.isLiked);
 
   return (
