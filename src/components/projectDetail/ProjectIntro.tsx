@@ -77,11 +77,11 @@ export default function ProjectIntro() {
 
 async function getData(updateData: Updater<ProjectInfo>, id: string) {
   try {
-    const response = await fetch(`https://name.store:8443/api/project/${id}`);
+    const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}`);
     // const response = await fetch('/public/dummy/atti2.json');
     const data = await response.json();
     updateData((obj) => {
-      Object.assign(obj, data.data[0]);
+      Object.assign(obj, data.data);
     });
   } catch (err) {
     console.log(err);
@@ -90,9 +90,10 @@ async function getData(updateData: Updater<ProjectInfo>, id: string) {
 
 async function getMember(updateData: Updater<Member>, id: string) {
   try {
-    const response = await fetch(`https://name.store:8443/api/project/${id}/members`);
+    const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}/members`);
     // const response = await fetch('/dummy/attiMember.json');
     const data = await response.json();
+    console.log(data.data);
     updateData((obj) => {
       Object.assign(obj, data.data);
     });
@@ -103,7 +104,7 @@ async function getMember(updateData: Updater<Member>, id: string) {
 
 async function getAccomplishment(updateAccomplishmentInfo: Updater<Accomplishment>, id: string) {
   try {
-    const response = await fetch(`https://name.store:8443/api/project/${id}/accomplishments`);
+    const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}/accomplishments`);
     // const response = await fetch('dummy/attiPerformance.json');
     const data = await response.json();
     updateAccomplishmentInfo((draft) => {
