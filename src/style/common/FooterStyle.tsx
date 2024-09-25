@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Icon } from '@/components/common/Icon';
 
 export const Footer = styled.footer`
-  padding: 40px min(170px, calc(70px + ((100vw - 1200px) / 2))) 24px min(170px, calc(70px + ((100vw - 1200px) / 2)));
+  padding: 40px calc(70px + ((100vw - 1200px) / 2)) 24px calc(70px + ((100vw - 1200px) / 2));
   width: 100%;
   border-top: 1px solid #cfebff;
   box-sizing: border-box;

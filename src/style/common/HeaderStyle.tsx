@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Icon } from '@/components/common/Icon';
 
 export const Header = styled.header`
-  padding: 0 min(170px, calc(70px + ((100vw - 1200px) / 2)));
+  padding: 0 calc(50px + ((100vw - 1200px) / 2));
   width: 100%;
   height: 66px;
   box-sizing: border-box;
