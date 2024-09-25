@@ -81,7 +81,7 @@ async function getData(updateData: Updater<ProjectInfo>, id: string) {
     // const response = await fetch('/public/dummy/atti2.json');
     const data = await response.json();
     updateData((obj) => {
-      Object.assign(obj, data.data[0]);
+      Object.assign(obj, data.data);
     });
   } catch (err) {
     console.log(err);
