@@ -49,9 +49,9 @@ const initialProjectInfo: ProjectInfo = {
 };
 
 const initialReleaseInfo: ReleaseType = {
-  data: [
+  projectReleases: [
     {
-      id: '',
+      id: 0,
       title: '',
       description: '',
       createdAt: '',
@@ -60,32 +60,30 @@ const initialReleaseInfo: ReleaseType = {
 };
 
 const initialAccomplishmentInfo: Accomplishment = {
-  data: {
-    accomplishments: [
-      {
-        id: '',
-        title: '',
-        publisher: '',
-        thumbnail: '',
-      },
-    ],
-    certifications: [
-      {
-        id: '',
-        title: '',
-        thumbnail: '',
-      },
-    ],
-    news: [
-      {
-        id: '',
-        title: '',
-        description: '',
-        link: '',
-        thumbnail: '',
-      },
-    ],
-  },
+  accomplishments: [
+    {
+      id: '',
+      title: '',
+      publisher: '',
+      thumbnail: '',
+    },
+  ],
+  certifications: [
+    {
+      id: '',
+      title: '',
+      thumbnail: '',
+    },
+  ],
+  news: [
+    {
+      id: '',
+      title: '',
+      description: '',
+      link: '',
+      thumbnail: '',
+    },
+  ],
 };
 
 const initialMember: Member = {
