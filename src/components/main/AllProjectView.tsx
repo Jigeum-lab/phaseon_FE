@@ -42,7 +42,7 @@ export default function AllProjectView() {
       | 'ENTERTAINMENT'
       | 'PERSONAL_BRANDING';
   }
-  const iconWithFill = [0, 2, 3, 4, 5, 6, 8];
+  const iconWithFill = [0, 2, 3, 4, 5, 6, 7, 9];
   const iconName = icons[currentCategory] as IconProps['name'];
 
   function handleObserver(entries: IntersectionObserverEntry[]) {
