@@ -87,7 +87,7 @@ export const BottomSection = styled.section`
   align-items: end;
 `;
 
-export const Instargram = styled(Icon)`
+export const INSTAGRAM = styled(Icon)`
   margin-right: 16px;
   cursor: pointer;
 `;
