@@ -12,7 +12,7 @@ export default function AllProjectView() {
   const { project, updateProject, currentCategory, category } = useContext(MainContext);
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(-1);
-  const [sortOption, setSortOption] = useState('updatedAt');
+  const [sortOption, setSortOption] = useState('createdAt');
   const [showMoreButton, setShowMoreButton] = useState(false);
   const [isPageUpdate, setIsPageUpdate] = useState(false);
   const isFetching = useRef<boolean>(false);
@@ -118,9 +118,9 @@ export default function AllProjectView() {
           <s.ButtonWrapper>
             <s.SortButton
               $current={sortOption}
-              $buttonName="updatedAt"
+              $buttonName="createdAt"
               onClick={() => {
-                setSortOption('updatedAt');
+                setSortOption('createdAt');
               }}
             >
               최신
@@ -175,7 +175,7 @@ async function getProjects(
     let response = await fetch(`https://namju.store:8443/api/v1/projects?page=${page}&sort=${sortOption}`);
     if (currentCategory !== 'ALLPROJECT') {
       response = await fetch(
-        `https://namju.store:8443/api/v1/projectss?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
+        `https://namju.store:8443/api/v1/projects?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
       );
     }
     // const response = await fetch('dummy/projectCollection.json');
