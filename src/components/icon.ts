@@ -38,6 +38,7 @@ export { ReactComponent as TRAVEL } from '@/assets/svg/Trip.svg';
 export { ReactComponent as SOCIAL_EFFECT } from '@/assets/svg/SocialEffect.svg';
 export { ReactComponent as PERSONAL_BRANDING } from '@/assets/svg/PersonalBranding.svg';
 export { ReactComponent as ENTERTAINMENT } from '@/assets/svg/Entertament.svg';
+export { ReactComponent as EDUCATION } from '@/assets/svg/Education.svg';
 
 export { ReactComponent as INSTARGRAM } from '@/assets/svg/Instargram.svg';
 export { ReactComponent as FACEBOOK } from '@/assets/svg/FaceBook.svg';

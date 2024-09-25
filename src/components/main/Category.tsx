@@ -14,6 +14,7 @@ export default function Category() {
     'SOCIAL_MEDIA',
     'PRODUCTIVITY',
     'HEALTH',
+    'EDUCATION',
     'TRAVEL',
     'SOCIAL_EFFECT',
     'ENTERTAINMENT',
@@ -26,6 +27,7 @@ export default function Category() {
       | 'SOCIAL_MEDIA'
       | 'PRODUCTIVITY'
       | 'HEALTH'
+      | 'EDUCATION'
       | 'TRAVEL'
       | 'SOCIAL_EFFECT'
       | 'ENTERTAINMENT'

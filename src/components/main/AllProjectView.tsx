@@ -23,6 +23,7 @@ export default function AllProjectView() {
     'SOCIAL_MEDIA',
     'PRODUCTIVITY',
     'HEALTH',
+    'EDUCATION',
     'TRAVEL',
     'SOCIAL_EFFECT',
     'ENTERTAINMENT',
@@ -35,6 +36,7 @@ export default function AllProjectView() {
       | 'SOCIAL_MEDIA'
       | 'PRODUCTIVITY'
       | 'HEALTH'
+      | 'EDUCATION'
       | 'TRAVEL'
       | 'SOCIAL_EFFECT'
       | 'ENTERTAINMENT'
