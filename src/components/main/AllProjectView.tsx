@@ -68,10 +68,20 @@ export default function AllProjectView() {
   }, [showMoreButton, isPageUpdate]);
 
   useEffect(() => {
-    if (page % 10 === 0 && page !== 0) {
-      setShowMoreButton(true);
+    setPage(-1);
+    isFetching.current = false;
+    updateProject((draft) => {
+      draft.data.totalMembers = 0;
+      draft.data.totalProjects = 0;
+      draft.data.projects = [];
+    });
+  }, [currentCategory, updateProject]);
+
+  useEffect(() => {
+    if (page === -1 && !isFetching.current) {
+      setPage(0);
+      return;
     }
-    if (page === -1 && !isFetching.current) return;
 
     getProjects(
       setIsLoading,
@@ -86,14 +96,12 @@ export default function AllProjectView() {
   }, [page, updateProject, showMoreButton, currentCategory, category.categoryicon, sortOption]);
 
   useEffect(() => {
-    setPage(-1);
-    isFetching.current = false;
-    updateProject((draft) => {
-      draft.data.totalMembers = 0;
-      draft.data.totalProjects = 0;
-      draft.data.projects = [];
-    });
-  }, [currentCategory, updateProject]);
+    if (page % 10 === 0 && page !== 0) {
+      setShowMoreButton(true);
+    } else {
+      setShowMoreButton(false);
+    }
+  }, [page]);
 
   return (
     <s.Section>
@@ -173,6 +181,7 @@ async function getProjects(
   setIsLoading(true);
   try {
     let response = await fetch(`https://namju.store:8443/api/v1/projects?page=${page}&sort=${sortOption}`);
+
     if (currentCategory !== 'ALLPROJECT') {
       response = await fetch(
         `https://namju.store:8443/api/v1/projects?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
