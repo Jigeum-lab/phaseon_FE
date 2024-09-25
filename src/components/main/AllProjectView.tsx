@@ -23,6 +23,7 @@ export default function AllProjectView() {
     'SOCIAL_MEDIA',
     'PRODUCTIVITY',
     'HEALTH',
+    'EDUCATION',
     'TRAVEL',
     'SOCIAL_EFFECT',
     'ENTERTAINMENT',
@@ -35,6 +36,7 @@ export default function AllProjectView() {
       | 'SOCIAL_MEDIA'
       | 'PRODUCTIVITY'
       | 'HEALTH'
+      | 'EDUCATION'
       | 'TRAVEL'
       | 'SOCIAL_EFFECT'
       | 'ENTERTAINMENT'
@@ -170,10 +172,10 @@ async function getProjects(
 ) {
   setIsLoading(true);
   try {
-    let response = await fetch(`https://name.store:8443/api/project?page=${page}&sort=${sortOption}`);
+    let response = await fetch(`http://cmsong111.iptime.org:8080/api/v1/projects?page=${page}&sort=${sortOption}`);
     if (currentCategory !== 'ALLPROJECT') {
       response = await fetch(
-        `https://name.store:8443/api/projects?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
+        `http://cmsong111.iptime.org:8080/api/v1/projects?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
       );
     }
     // const response = await fetch('dummy/projectCollection.json');
