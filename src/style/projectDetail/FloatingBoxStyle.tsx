@@ -5,7 +5,7 @@ export const Section = styled.section<{ $buttonNum: number }>`
   margin-bottom: 470px;
   padding: 16px 16px 8px 16px;
   width: 220px;
-  height: calc(406px + ${({ $buttonNum }) => $buttonNum * 36}px);
+  height: calc(375px + ${({ $buttonNum }) => $buttonNum * 36}px);
   box-sizing: border-box;
   border-radius: 4px;
   box-shadow:
@@ -26,6 +26,7 @@ export const ViewCategoryBox = styled.div`
   width: 188px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const Category = styled.p`
@@ -62,7 +63,6 @@ export const View = styled.p`
 `;
 
 export const PromotionBox = styled.div`
-  padding: 8px 0;
   width: 188px;
   border-bottom: 1px solid #cfebff7f;
   display: flex;
@@ -141,7 +141,7 @@ export const Title = styled.p`
 `;
 
 export const ImgBox = styled.div`
-  padding: 8px 0;
+  padding-bottom: 8px;
   width: 188px;
   border-bottom: 1px solid #cfebff7f;
   display: flex;
