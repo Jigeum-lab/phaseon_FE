@@ -26,8 +26,8 @@ export const CarouselSlide = styled.div`
 `;
 
 export const Img = styled.img<{ $type: string }>`
-  width: ${({ $type }) => ($type === 'row' ? '320px' : '180px')};
-  height: ${({ $type }) => ($type === 'row' ? '120px' : '190px')};
+  width: ${({ $type }) => ($type === 'row' ? '320px' : '150px')};
+  height: ${({ $type }) => ($type === 'row' ? '180px' : '190px')};
 `;
 
 export const ButtonSection = styled.section`
