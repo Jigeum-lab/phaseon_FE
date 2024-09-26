@@ -18,3 +18,18 @@ primary_region = 'nrt'
 
 [[vm]]
   size = 'shared-cpu-1x'
+
+  [[services]]
+  http_checks = []
+  internal_port = 80
+  processes = ["app"]
+  script_checks = []
+
+  [[services.http_routes]]
+  handlers = ["static"]
+  match = "*"
+  
+  [[services.http_routes]]
+  match = "*"
+  handlers = ["rewrite"]
+  rewrite = { path = "/index.html" }
