@@ -110,8 +110,8 @@ export default function AllProjectView() {
           <s.Title>
             <Icon
               name={iconName}
-              stroke={getStroke(currentCategory, iconWithFill, currentCategory)}
-              fill={getFill(currentCategory, iconWithFill, currentCategory)}
+              stroke={getStroke(currentCategory, iconWithFill, currentCategory, '#247BFF')}
+              fill={getFill(currentCategory, iconWithFill, currentCategory, '#247BFF')}
               width={32}
               height={33}
             />
