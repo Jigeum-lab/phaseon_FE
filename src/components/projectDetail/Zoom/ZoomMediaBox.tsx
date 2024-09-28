@@ -4,12 +4,22 @@ import { useImmer } from 'use-immer';
 import { ProjectDetailContext } from '@/context/ProjectDetailContext';
 import { ZoomContext } from '@/context/ZoomContext';
 import * as s from '@/style/ZoomStyle/ZoomMediaStyle';
-import { handleDoubleClick, handleMouseDown, handleMouseMove, handleMouseUp } from '@/utils/ZoomFunction';
+import { closeZoom, handleDoubleClick, handleMouseDown, handleMouseMove, handleMouseUp } from '@/utils/ZoomFunction';
 
 export default function ZoomMediaBox() {
   const { projectInfo } = useContext(ProjectDetailContext);
-  const { startImg, setIsZoomed, isZoomed, zoomCount, setZoomCount, transform, updateTransform, setStartImg } =
-    useContext(ZoomContext);
+  const {
+    startImg,
+    setIsZoomed,
+    isZoomed,
+    zoomCount,
+    setZoomCount,
+    transform,
+    updateTransform,
+    setStartImg,
+    setShowZoomComponent,
+  } = useContext(ZoomContext);
+
   const imgRef = useRef<HTMLImageElement | null>(null);
   const imgWrapperRef = useRef<HTMLDivElement | null>(null);
   const [drag, setDrag] = useState(false);
@@ -102,6 +112,9 @@ export default function ZoomMediaBox() {
       {carouselImgs[startImg].mediaType !== 'video' && (
         <s.ImgWrapper
           ref={imgWrapperRef}
+          onClick={() => {
+            closeZoom(setIsZoomed, setZoomCount, updateTransform, setShowZoomComponent);
+          }}
           onDoubleClick={() => {
             handleDoubleClick({ setIsZoomed, isZoomed, setZoomCount, updateTransform });
           }}

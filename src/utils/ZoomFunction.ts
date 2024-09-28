@@ -1,4 +1,22 @@
+import { SetStateAction } from 'react';
+import { Updater } from 'use-immer';
 import { HandelDoubleClickType, HandleMouseDownType, HandleMouseMoveType, HandleMouseUpType } from '../interface';
+
+export function closeZoom(
+  setIsZoomed: React.Dispatch<SetStateAction<boolean>>,
+  setZoomCount: React.Dispatch<SetStateAction<number>>,
+  updateTransform: Updater<{ x: number; y: number }>,
+  setShowZoomComponent: React.Dispatch<SetStateAction<boolean>>,
+) {
+  document.body.style.overflow = 'auto';
+  setZoomCount(1);
+  updateTransform((transformObj) => {
+    transformObj.x = 0;
+    transformObj.y = 0;
+  });
+  setShowZoomComponent(false);
+  setIsZoomed(false);
+}
 
 export function handleDoubleClick(params: HandelDoubleClickType) {
   const { setIsZoomed, isZoomed, setZoomCount, updateTransform } = params;
