@@ -78,7 +78,7 @@ export default function AllProjectView() {
   }, [currentCategory, sortOption, updateProject]);
 
   useEffect(() => {
-    if (!isFetching.current || page < 0) return;
+    if (!isFetching.current) return;
     getProjects(
       setIsLoading,
       updateProject,
@@ -137,7 +137,7 @@ export default function AllProjectView() {
         <s.MoreButton
           onClick={() => {
             setShowMoreButton(false);
-            setPage((prevPage) => prevPage + 1); // "더보기" 버튼 클릭 시 다음 페이지로
+            setPage((prevPage) => prevPage + 1);
           }}
         >
           <Icon name="Loading" width={20} height={20} fill="white" />
@@ -161,7 +161,7 @@ async function getProjects(
   currentCategory: string,
   page: number,
   sortOption: string,
-  hasMoreData: { current: boolean }, // 더 이상 데이터가 없을 경우 false
+  hasMoreData: { current: boolean },
 ) {
   setIsLoading(true);
   try {
@@ -176,17 +176,14 @@ async function getProjects(
     if (data.data.projects.length > 0) {
       updateProject((draft) => {
         if (page === 0) {
-          // 카테고리나 정렬 옵션이 변경되었을 경우 데이터를 새로 덮어쓰기
           draft.data.projects = data.data.projects;
         } else {
-          // 기존 데이터에 새 데이터를 누적 추가
           draft.data.projects = [...draft.data.projects, ...data.data.projects];
         }
         draft.data.totalProjects = data.data.totalProjects;
         draft.data.totalMembers = data.data.totalMembers;
       });
     } else {
-      // 더 이상 데이터가 없을 경우 hasMoreData를 false로 설정
       hasMoreData.current = false;
     }
   } catch (err) {
