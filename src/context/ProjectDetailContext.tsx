@@ -41,7 +41,7 @@ const initialProjectInfo: ProjectInfo = {
   ],
   viewCount: 0,
   likeCount: 0,
-  notificationCount: 0,
+  subscribeCount: 0,
   isLiked: false,
   isNotified: false,
   createdAt: 0,

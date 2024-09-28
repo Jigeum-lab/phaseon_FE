@@ -120,7 +120,7 @@ export interface ProjectInfo {
   links: Link[];
   viewCount: number;
   likeCount: number;
-  notificationCount: number;
+  subscribeCount: number;
   isLiked: boolean;
   isNotified: boolean;
   createdAt: number;
