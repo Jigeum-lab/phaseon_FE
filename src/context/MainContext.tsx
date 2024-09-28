@@ -74,20 +74,7 @@ export function MainProvider({ children }: { children: React.ReactNode }) {
   );
   const [project, updateProject] = useImmer<ProjectGalleryData>({
     data: {
-      projects: [
-        {
-          id: 1,
-          thumbnail: '',
-          title: '',
-          summary: '',
-          likeCount: 0,
-          awardCount: 0,
-          memberCount: 0,
-          viewCount: 0,
-          createdAt: '',
-          category: [],
-        },
-      ],
+      projects: [],
       totalProjects: 0,
       totalMembers: 0,
       category: null,
