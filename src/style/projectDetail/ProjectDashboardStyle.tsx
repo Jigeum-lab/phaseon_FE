@@ -14,18 +14,31 @@ export const CategoryBox = styled.section`
   border-bottom: 1px solid rgba(207, 235, 255, 0.7);
   display: flex;
   align-items: center;
+  position: relative;
 `;
 
-export const CategoryText = styled.p<{ $currentCategory: string; $id: string }>`
+export const CategoryText = styled.div<{ $currentCategory: string; $id: string }>`
   margin-right: 32px;
   width: auto;
   height: 100%;
-  box-sizing: border-box;
-  border-bottom: ${(props) => (props.$currentCategory === props.$id ? '4px solid #69acff' : 'none')};
-  color: ${(props) => (props.$currentCategory === props.$id ? 'black' : '#47484c')}; // focus -> 000
+  color: ${(props) => (props.$currentCategory === props.$id ? 'black' : '#47484c')};
   font-size: 15px;
   font-weight: 500;
   line-height: 146.7%;
   letter-spacing: 0.144px;
   cursor: pointer;
+`;
+
+export const UnderLine = styled.div<{
+  $width: number;
+  $categoryX: number;
+}>`
+  width: ${({ $width }) => $width}px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+  transform: translateX(${({ $categoryX }) => $categoryX}px);
+  background-color: #69acff;
 `;
