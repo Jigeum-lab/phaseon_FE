@@ -49,12 +49,12 @@ export const Img = styled.img<{
 export const LeftButton = styled(Icon)`
   position: absolute;
   left: 20px;
-  z-index: 5;
+  z-index: 2;
   cursor: pointer;
 `;
 export const RightButton = styled(Icon)`
   position: absolute;
   right: 20px;
-  z-index: 5;
+  z-index: 2;
   cursor: pointer;
 `;

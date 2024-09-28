@@ -24,12 +24,12 @@ export default function ZoomMediaBox() {
   img.src = carouselImgs[startImg].url;
 
   useEffect(() => {
-    if (img.width >= 1920) {
+    if (img.width >= 1920 || carouselImgs[startImg].mediaType === 'VIDEO') {
       setImgDirection('row');
     } else {
       setImgDirection('col');
     }
-  }, [img.width]);
+  }, [startImg, img.width, carouselImgs]);
 
   useEffect(() => {
     const MouseMoveFunction = (e: MouseEvent) => {
@@ -99,7 +99,7 @@ export default function ZoomMediaBox() {
 
   return (
     <>
-      {carouselImgs[startImg].mediaType !== 'video' && (
+      {carouselImgs[startImg].mediaType !== 'VIDEO' && (
         <s.ImgWrapper
           ref={imgWrapperRef}
           onDoubleClick={() => {
@@ -109,6 +109,10 @@ export default function ZoomMediaBox() {
           <s.Div $zoomCount={zoomCount} $type={imgDirection}>
             <s.LeftButton
               name="LeftButton"
+              onDoubleClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
               onClick={() => {
                 setStartImg((prev) => {
                   if (prev === 0) {
@@ -143,6 +147,10 @@ export default function ZoomMediaBox() {
             />
             <s.RightButton
               name="RightButton"
+              onDoubleClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
               onClick={() => {
                 setStartImg((prev) => {
                   if (prev === carouselImgs.length - 1) {
@@ -155,7 +163,7 @@ export default function ZoomMediaBox() {
           </s.Div>
         </s.ImgWrapper>
       )}
-      {carouselImgs[startImg].mediaType === 'video' && (
+      {carouselImgs[startImg].mediaType === 'VIDEO' && (
         <s.Div $zoomCount={1} $type="row">
           <s.LeftButton
             name="LeftButton"
