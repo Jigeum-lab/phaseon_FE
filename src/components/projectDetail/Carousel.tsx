@@ -14,9 +14,9 @@ export default function Carousel() {
   const { setStartImg, setShowZoomComponent } = useContext(ZoomContext);
   const [currentImg, setCurrentImg] = useState<number>(0);
   const img = new Image();
-
+  const projectLength = projectInfo.projectMedia.length;
   const slides =
-    projectInfo.projectMedia.length <= 2
+    projectInfo.projectMedia.length <= 3
       ? [...projectInfo.projectMedia, ...projectInfo.projectMedia]
       : projectInfo.projectMedia;
 
@@ -69,7 +69,7 @@ export default function Carousel() {
         </s.CarouselContainer>
         <s.ButtonSection>
           {slides.map((_carouselObj, index) => {
-            if (index < slides.length / 2) {
+            if (index < projectLength / 2) {
               return (
                 <s.SlideButton
                   aria-label="btn"
