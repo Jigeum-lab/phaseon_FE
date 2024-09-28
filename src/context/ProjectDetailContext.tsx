@@ -23,7 +23,8 @@ const initialProjectInfo: ProjectInfo = {
   shortDescription: '',
   description: '',
   thumbnail: '',
-  banner: '',
+  banner: null,
+  brandColor: '',
   categories: [''],
   status: '',
   projectMedia: [

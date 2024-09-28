@@ -113,7 +113,8 @@ export interface ProjectInfo {
   shortDescription: string;
   description: string;
   thumbnail: string;
-  banner: string;
+  banner: string | null;
+  brandColor: string;
   categories: string[];
   status: string;
   projectMedia: CarouselItem[];

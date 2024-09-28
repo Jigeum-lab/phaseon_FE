@@ -68,7 +68,11 @@ export default function ProjectIntro() {
 
   return (
     <s.Section ref={introRef}>
-      <s.Banner src={projectInfo.banner} alt="" />
+      {projectInfo.banner ? (
+        <s.Banner src={projectInfo.banner} alt="" />
+      ) : (
+        <s.ColorBanner $color={projectInfo.brandColor} />
+      )}
       <s.IntroSection>
         <s.MainImg src={projectInfo.thumbnail} alt="" />
         <s.ProjectName>{projectInfo.title}</s.ProjectName>

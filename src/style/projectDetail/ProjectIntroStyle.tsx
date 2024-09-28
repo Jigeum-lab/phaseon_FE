@@ -13,6 +13,13 @@ export const Banner = styled.img`
   position: absolute;
 `;
 
+export const ColorBanner = styled.div<{ $color: string }>`
+  width: 100%;
+  height: 160px;
+  background-color: ${({ $color }) => $color};
+  opacity: 0.3;
+`;
+
 export const IntroSection = styled.section`
   margin-top: 80px;
   padding: 0 20px;
