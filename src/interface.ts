@@ -119,9 +119,9 @@ export interface ProjectInfo {
   status: string;
   projectMedia: CarouselItem[];
   links: Link[];
-  viewCount: number;
-  likeCount: number;
-  subscribeCount: number;
+  viewCount: string;
+  likeCount: string;
+  subscribeCount: string;
   isLiked: boolean;
   isNotified: boolean;
   createdAt: number;

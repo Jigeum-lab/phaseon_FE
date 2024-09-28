@@ -8,6 +8,7 @@ import { Icon } from '@/components/common/Icon';
 import { getStroke } from '@/utils/getStroke';
 import * as s from '@/style/projectDetail/ProjectIntroStyle';
 import { getFill } from '@/utils/getFill';
+import { formatNumber } from '@/utils/formatNumber';
 
 export default function ProjectIntro() {
   const { projectInfo, updateProjectInfo, updateMemberInfo, updateAccomplishmentInfo } =
@@ -110,6 +111,9 @@ async function getData(updateData: Updater<ProjectInfo>, id: string) {
     const data = await response.json();
     updateData((obj) => {
       Object.assign(obj, data.data);
+      obj.likeCount = formatNumber(data.data.likeCount);
+      obj.viewCount = formatNumber(data.data.viewCount);
+      obj.subscribeCount = formatNumber(data.data.subscribeCount);
     });
   } catch (err) {
     console.log(err);
