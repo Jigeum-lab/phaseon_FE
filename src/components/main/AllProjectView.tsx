@@ -46,6 +46,10 @@ export default function AllProjectView() {
   const iconName = icons[currentCategory] as IconProps['name'];
 
   useEffect(() => {
+    document.body.style.overflow = 'auto';
+  }, []);
+
+  useEffect(() => {
     function handleObserver(entries: IntersectionObserverEntry[]) {
       const target = entries[0];
       if (target.isIntersecting && !isFetching.current && !showMoreButton && hasMoreData.current) {
