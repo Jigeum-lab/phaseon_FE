@@ -27,6 +27,8 @@ export const ProjectInformation = styled(ReactMarkdown)`
   blockquote {
     margin-top: 8px;
     color: #858588;
+    border-left: 3px solid #69acff;
+    text-indent: 16px;
     font-size: 14px;
     font-weight: 400;
     line-height: 142.9%;
@@ -42,7 +44,6 @@ export const ProjectInformation = styled(ReactMarkdown)`
     letter-spacing: -0.004px;
   }
   li {
-    list-style: none;
     color: #47484c;
     font-size: 16px;
     font-weight: 400;

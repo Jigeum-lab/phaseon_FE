@@ -85,8 +85,8 @@ export default function ProjectIntro() {
                     name={currenticon}
                     width={14}
                     height={14}
-                    stroke={getStroke(currentIconIndex, iconWithFill, currentIconIndex)}
-                    fill={getFill(currentIconIndex, iconWithFill, currentIconIndex)}
+                    stroke={getStroke(currentIconIndex, iconWithFill, currentIconIndex, '#32ade6')}
+                    fill={getFill(currentIconIndex, iconWithFill, currentIconIndex, '#32ade6')}
                   />
                   <p>{getCategoryText(text)}</p>
                 </s.Category>

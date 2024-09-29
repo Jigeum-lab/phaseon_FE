@@ -51,8 +51,8 @@ export default function Category() {
             >
               <Icon
                 name={iconName}
-                stroke={getStroke(index, iconWithFill, currentCategory)}
-                fill={getFill(index, iconWithFill, currentCategory)}
+                stroke={getStroke(index, iconWithFill, currentCategory, '#247BFF')}
+                fill={getFill(index, iconWithFill, currentCategory, '#247BFF')}
                 width={20}
                 height={21}
               />

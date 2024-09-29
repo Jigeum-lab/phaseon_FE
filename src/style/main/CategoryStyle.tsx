@@ -49,11 +49,10 @@ export const Category = styled.li<{ $focus: number; $currentNum: number }>`
   cursor: pointer;
 
   &&:hover {
-    background-color: ${({ $focus, $currentNum }) => ($currentNum === $focus ? '' : 'rgba(71, 72, 76, 0.05)')};
+    background-color: ${({ $focus, $currentNum }) => ($currentNum === $focus ? '' : '#F7FBFF')};
   }
 
   &&:active {
-    background-color: ${({ $focus, $currentNum }) => ($currentNum === $focus ? '' : 'rgba(105, 172, 255, 0.12)')};
-    background-color: rgba(105, 172, 255, 0.12);
+    background-color: ${({ $focus, $currentNum }) => ($currentNum === $focus ? '' : '#EDF5FF ')};
   }
 `;

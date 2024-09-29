@@ -10,6 +10,7 @@ export const Section = styled.section`
 export const Banner = styled.img`
   width: 100%;
   height: 160px;
+  object-fit: cover;
   position: absolute;
 `;
 
