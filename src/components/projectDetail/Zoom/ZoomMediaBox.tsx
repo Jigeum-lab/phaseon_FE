@@ -34,12 +34,12 @@ export default function ZoomMediaBox() {
   img.src = carouselImgs[startImg].url;
 
   useEffect(() => {
-    if (img.width >= 1920 || carouselImgs[startImg].mediaType === 'VIDEO') {
+    if (img.width > img.height || carouselImgs[startImg].mediaType === 'VIDEO') {
       setImgDirection('row');
     } else {
       setImgDirection('col');
     }
-  }, [startImg, img.width, carouselImgs]);
+  }, [startImg, img.width, carouselImgs, img.height]);
 
   useEffect(() => {
     const MouseMoveFunction = (e: MouseEvent) => {
