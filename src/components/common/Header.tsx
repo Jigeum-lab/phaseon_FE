@@ -12,7 +12,7 @@ export default function Header({ setShowModal }: { setShowModal: React.Dispatch<
 
   return (
     <s.Header>
-      <s.NavigationBox width={353}>
+      <s.NavigationBox width={335}>
         <s.SvgIcon
           name="Logo"
           onClick={() => {

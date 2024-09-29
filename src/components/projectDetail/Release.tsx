@@ -28,7 +28,6 @@ export default function Release() {
 async function getRelease(updateReleaseInfo: Updater<ReleaseType>, id: string) {
   try {
     const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}/release`);
-    // const response = await fetch('dummy/attiRelease.json');
     const data = await response.json();
     updateReleaseInfo((draft) => {
       Object.assign(draft, data.data);

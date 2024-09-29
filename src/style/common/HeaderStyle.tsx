@@ -24,7 +24,8 @@ export const SvgIcon = styled(Icon)`
 `;
 
 export const Nav = styled.nav`
-  width: 177px;
+  margin-left: 44px;
+  width: 159px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,12 +33,12 @@ export const Nav = styled.nav`
 `;
 
 export const IconBox = styled.div<{ color: string }>`
-  width: 90px;
-  color: ${({ color }) => color};
+  width: 79px;
   display: flex;
   align-items: center;
   cursor: pointer;
   gap: 4px;
+
 `;
 
 export const RegisterButton = styled.button`
@@ -65,4 +66,5 @@ export const RegisterButton = styled.button`
 
 export const Article = styled.p`
   color: #47484c;
+  font-size: 15px;
 `;

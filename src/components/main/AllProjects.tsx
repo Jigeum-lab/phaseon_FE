@@ -3,6 +3,7 @@ import * as s from '@/style/main/AllProjectsStyle';
 import { MainContext } from '@/context/MainContext';
 import { Icon } from '@/components/common/Icon';
 import { useNavigate } from 'react-router-dom';
+import { formatNumber } from '@/utils/formatNumber';
 
 export default function AllProjects() {
   const { project } = useContext(MainContext);
@@ -49,15 +50,19 @@ export default function AllProjects() {
               <s.InpoBox>
                 <s.IconBox>
                   <Icon name="FillStar" fill="#FFCC00" />
-                  <p>{projectObj.likeCount}</p>
+                  <p>{formatNumber(projectObj.likeCount)}</p>
                 </s.IconBox>
                 <s.IconBox>
                   <Icon name="Medal" />
-                  <p>{projectObj.awardCount}</p>
+                  <p>{formatNumber(projectObj.awardCount)}</p>
                 </s.IconBox>
                 <s.IconBox>
                   <Icon name="Member" fill="#69ACFF" width={16} height={12} />
-                  <p>{projectObj.memberCount}</p>
+                  <p>{formatNumber(projectObj.memberCount)}</p>
+                </s.IconBox>
+                <s.IconBox>
+                  <Icon name="View" />
+                  <p>{formatNumber(projectObj.viewCount)}</p>
                 </s.IconBox>
               </s.InpoBox>
               <s.CategoryBox>

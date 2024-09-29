@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 import { Icon } from '@/components/common/Icon';
 
+export const Section = styled.section`
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+`;
+
 export const ImgWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -17,15 +23,16 @@ export const Div = styled.div<{ $zoomCount: number; $type: string }>`
       return 70 * $zoomCount;
     }
     if ($type === 'col') {
-      return 40 * $zoomCount;
+      return 27 * $zoomCount;
     }
     return 100;
   }}%;
-  height: ${({ $type }) => ($type === 'row' ? '80%' : '75%')};
+  height: ${({ $type }) => ($type === 'row' ? '80%' : '85%')};
   position: relative;
   display: flex;
   align-items: center;
   transition-duration: 0.3s;
+  z-index: 2;
 `;
 
 export const Img = styled.img<{
@@ -49,12 +56,12 @@ export const Img = styled.img<{
 export const LeftButton = styled(Icon)`
   position: absolute;
   left: 20px;
-  z-index: 5;
+  z-index: 3;
   cursor: pointer;
 `;
 export const RightButton = styled(Icon)`
   position: absolute;
   right: 20px;
-  z-index: 5;
+  z-index: 3;
   cursor: pointer;
 `;

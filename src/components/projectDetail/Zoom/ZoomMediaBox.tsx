@@ -4,12 +4,22 @@ import { useImmer } from 'use-immer';
 import { ProjectDetailContext } from '@/context/ProjectDetailContext';
 import { ZoomContext } from '@/context/ZoomContext';
 import * as s from '@/style/ZoomStyle/ZoomMediaStyle';
-import { handleDoubleClick, handleMouseDown, handleMouseMove, handleMouseUp } from '@/utils/ZoomFunction';
+import { closeZoom, handleDoubleClick, handleMouseDown, handleMouseMove, handleMouseUp } from '@/utils/ZoomFunction';
 
 export default function ZoomMediaBox() {
   const { projectInfo } = useContext(ProjectDetailContext);
-  const { startImg, setIsZoomed, isZoomed, zoomCount, setZoomCount, transform, updateTransform, setStartImg } =
-    useContext(ZoomContext);
+  const {
+    startImg,
+    setIsZoomed,
+    isZoomed,
+    zoomCount,
+    setZoomCount,
+    transform,
+    updateTransform,
+    setStartImg,
+    setShowZoomComponent,
+  } = useContext(ZoomContext);
+
   const imgRef = useRef<HTMLImageElement | null>(null);
   const imgWrapperRef = useRef<HTMLDivElement | null>(null);
   const [drag, setDrag] = useState(false);
@@ -24,12 +34,12 @@ export default function ZoomMediaBox() {
   img.src = carouselImgs[startImg].url;
 
   useEffect(() => {
-    if (img.width >= 1920) {
+    if (img.width >= 1920 || carouselImgs[startImg].mediaType === 'VIDEO') {
       setImgDirection('row');
     } else {
       setImgDirection('col');
     }
-  }, [img.width]);
+  }, [startImg, img.width, carouselImgs]);
 
   useEffect(() => {
     const MouseMoveFunction = (e: MouseEvent) => {
@@ -98,17 +108,29 @@ export default function ZoomMediaBox() {
   };
 
   return (
-    <>
-      {carouselImgs[startImg].mediaType !== 'video' && (
-        <s.ImgWrapper
-          ref={imgWrapperRef}
-          onDoubleClick={() => {
-            handleDoubleClick({ setIsZoomed, isZoomed, setZoomCount, updateTransform });
-          }}
-        >
-          <s.Div $zoomCount={zoomCount} $type={imgDirection}>
+    <s.Section
+      onClick={(e) => {
+        if (imgRef.current && !imgRef.current.contains(e.target as Node)) {
+          closeZoom(setIsZoomed, setZoomCount, updateTransform, setShowZoomComponent);
+        }
+      }}
+    >
+      {carouselImgs[startImg].mediaType !== 'VIDEO' && (
+        <s.ImgWrapper ref={imgWrapperRef}>
+          <s.Div
+            ref={imgRef}
+            $zoomCount={zoomCount}
+            $type={imgDirection}
+            onDoubleClick={() => {
+              handleDoubleClick({ setIsZoomed, isZoomed, setZoomCount, updateTransform });
+            }}
+          >
             <s.LeftButton
               name="LeftButton"
+              onDoubleClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
               onClick={() => {
                 setStartImg((prev) => {
                   if (prev === 0) {
@@ -121,7 +143,6 @@ export default function ZoomMediaBox() {
             <s.Img
               src={carouselImgs[startImg].url}
               alt=""
-              ref={imgRef}
               $zoomCount={zoomCount}
               $drag={drag}
               $dragOffSet={dragOffSet}
@@ -143,6 +164,10 @@ export default function ZoomMediaBox() {
             />
             <s.RightButton
               name="RightButton"
+              onDoubleClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
               onClick={() => {
                 setStartImg((prev) => {
                   if (prev === carouselImgs.length - 1) {
@@ -155,7 +180,7 @@ export default function ZoomMediaBox() {
           </s.Div>
         </s.ImgWrapper>
       )}
-      {carouselImgs[startImg].mediaType === 'video' && (
+      {carouselImgs[startImg].mediaType === 'VIDEO' && (
         <s.Div $zoomCount={1} $type="row">
           <s.LeftButton
             name="LeftButton"
@@ -188,6 +213,6 @@ export default function ZoomMediaBox() {
           />
         </s.Div>
       )}
-    </>
+    </s.Section>
   );
 }

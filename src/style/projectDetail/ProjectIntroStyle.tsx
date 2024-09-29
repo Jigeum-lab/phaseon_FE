@@ -10,7 +10,15 @@ export const Section = styled.section`
 export const Banner = styled.img`
   width: 100%;
   height: 160px;
+  object-fit: cover;
   position: absolute;
+`;
+
+export const ColorBanner = styled.div<{ $color: string }>`
+  width: 100%;
+  height: 160px;
+  background-color: ${({ $color }) => $color};
+  opacity: 0.3;
 `;
 
 export const IntroSection = styled.section`

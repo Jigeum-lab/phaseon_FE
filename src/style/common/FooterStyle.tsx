@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Icon } from '@/components/common/Icon';
 
 export const Footer = styled.footer`
   padding: 40px calc(70px + ((100vw - 1200px) / 2)) 24px calc(70px + ((100vw - 1200px) / 2));
@@ -85,12 +84,4 @@ export const BottomSection = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: end;
-`;
-
-export const INSTAGRAM = styled(Icon)`
-  margin-right: 16px;
-  cursor: pointer;
-`;
-export const LinkedIn = styled(Icon)`
-  cursor: pointer;
 `;

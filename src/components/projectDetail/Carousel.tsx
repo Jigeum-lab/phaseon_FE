@@ -13,11 +13,10 @@ export default function Carousel() {
   const { projectInfo } = useContext(ProjectDetailContext);
   const { setStartImg, setShowZoomComponent } = useContext(ZoomContext);
   const [currentImg, setCurrentImg] = useState<number>(0);
-  const [imgDirection, setImgDirection] = useState('row');
   const img = new Image();
-
+  const projectLength = projectInfo.projectMedia.length;
   const slides =
-    projectInfo.projectMedia.length <= 2
+    projectInfo.projectMedia.length <= 3
       ? [...projectInfo.projectMedia, ...projectInfo.projectMedia]
       : projectInfo.projectMedia;
 
@@ -32,16 +31,6 @@ export default function Carousel() {
     emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
 
-  useEffect(() => {
-    if (img.width <= 0) return;
-
-    if (img.width >= 1920) {
-      setImgDirection('row');
-    } else {
-      setImgDirection('col');
-    }
-  }, [img.width]);
-
   return (
     <s.Section>
       <ButtonBox emblaApi={emblaApi} padding={20} />
@@ -49,7 +38,7 @@ export default function Carousel() {
         <s.CarouselContainer>
           {slides.map((carouselObj, index) => {
             img.src = carouselObj.url;
-            if (carouselObj.mediaType === 'video') {
+            if (carouselObj.mediaType === 'VIDEO') {
               return (
                 <s.CarouselSlide key={carouselObj.url + index}>
                   <YouTube
@@ -67,7 +56,7 @@ export default function Carousel() {
                 <s.Img
                   src={carouselObj.url}
                   alt=""
-                  $type={imgDirection}
+                  $type={img.width >= 1920 ? 'row' : 'col'}
                   onClick={() => {
                     setStartImg(index);
                     setShowZoomComponent(true);
@@ -80,7 +69,7 @@ export default function Carousel() {
         </s.CarouselContainer>
         <s.ButtonSection>
           {slides.map((_carouselObj, index) => {
-            if (index < slides.length / 2) {
+            if (index < projectLength / 2) {
               return (
                 <s.SlideButton
                   aria-label="btn"

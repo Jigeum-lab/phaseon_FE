@@ -11,11 +11,11 @@ import { getFill } from '@/utils/getFill';
 export default function AllProjectView() {
   const { project, updateProject, currentCategory, category } = useContext(MainContext);
   const [isLoading, setIsLoading] = useState(false);
-  const [page, setPage] = useState(-1);
+  const [page, setPage] = useState(0);
   const [sortOption, setSortOption] = useState('createdAt');
   const [showMoreButton, setShowMoreButton] = useState(false);
-  const [isPageUpdate, setIsPageUpdate] = useState(false);
   const isFetching = useRef<boolean>(false);
+  const hasMoreData = useRef<boolean>(true);
 
   const icons = [
     'BigProjectIcon',
@@ -45,19 +45,18 @@ export default function AllProjectView() {
   const iconWithFill = [0, 2, 3, 4, 5, 6, 7, 9];
   const iconName = icons[currentCategory] as IconProps['name'];
 
-  function handleObserver(entries: IntersectionObserverEntry[]) {
-    const target = entries[0];
-    if (target.isIntersecting && !isFetching.current) {
-      isFetching.current = true;
-      setPage((prevPage) => prevPage + 1);
-    }
-  }
-
   useEffect(() => {
+    function handleObserver(entries: IntersectionObserverEntry[]) {
+      const target = entries[0];
+      if (target.isIntersecting && !isFetching.current && !showMoreButton && hasMoreData.current) {
+        isFetching.current = true;
+        setPage((prevPage) => prevPage + 1);
+      }
+    }
     const observer = new IntersectionObserver(handleObserver, {
       threshold: 0.5,
     });
-    if (showMoreButton || isPageUpdate) return;
+    if (showMoreButton) return;
     const observerTarget = document.getElementById('observer');
     if (observerTarget) {
       observer.observe(observerTarget);
@@ -65,43 +64,39 @@ export default function AllProjectView() {
     return () => {
       if (observerTarget) observer.unobserve(observerTarget);
     };
-  }, [showMoreButton, isPageUpdate]);
+  }, [showMoreButton, currentCategory, isFetching, hasMoreData]);
 
   useEffect(() => {
-    setPage(-1);
-    isFetching.current = false;
+    setPage(0);
+    hasMoreData.current = true;
     updateProject((draft) => {
       draft.data.totalMembers = 0;
       draft.data.totalProjects = 0;
       draft.data.projects = [];
     });
-  }, [currentCategory, updateProject]);
+    isFetching.current = true;
+  }, [currentCategory, sortOption, updateProject]);
 
   useEffect(() => {
-    if (page === -1 && !isFetching.current) {
-      setPage(0);
-      return;
-    }
-
+    if (!isFetching.current) return;
     getProjects(
       setIsLoading,
       updateProject,
-      showMoreButton,
       isFetching,
-      setIsPageUpdate,
       category.categoryicon[currentCategory],
       page,
       sortOption,
+      hasMoreData,
     );
-  }, [page, updateProject, showMoreButton, currentCategory, category.categoryicon, sortOption]);
+  }, [page, updateProject, showMoreButton, sortOption, currentCategory, category.categoryicon]);
 
   useEffect(() => {
-    if (page % 10 === 0 && page !== 0) {
+    if (page > 0 && project.data.projects.length % 100 === 0 && hasMoreData.current) {
       setShowMoreButton(true);
     } else {
       setShowMoreButton(false);
     }
-  }, [page]);
+  }, [project.data.projects.length, page]);
 
   return (
     <s.Section>
@@ -110,8 +105,8 @@ export default function AllProjectView() {
           <s.Title>
             <Icon
               name={iconName}
-              stroke={getStroke(currentCategory, iconWithFill, currentCategory)}
-              fill={getFill(currentCategory, iconWithFill, currentCategory)}
+              stroke={getStroke(currentCategory, iconWithFill, currentCategory, '#247BFF')}
+              fill={getFill(currentCategory, iconWithFill, currentCategory, '#247BFF')}
               width={32}
               height={33}
             />
@@ -124,21 +119,13 @@ export default function AllProjectView() {
         <s.SortButtonBox>
           <Icon name="Swap" />
           <s.ButtonWrapper>
-            <s.SortButton
-              $current={sortOption}
-              $buttonName="createdAt"
-              onClick={() => {
-                setSortOption('createdAt');
-              }}
-            >
+            <s.SortButton $current={sortOption} $buttonName="createdAt" onClick={() => setSortOption('createdAt')}>
               최신
             </s.SortButton>
             <s.SortButton
               $current={sortOption}
               $buttonName="likeCount&sort=viewCount"
-              onClick={() => {
-                setSortOption('likeCount&sort=viewCount');
-              }}
+              onClick={() => setSortOption('likeCount&sort=viewCount')}
             >
               인기
             </s.SortButton>
@@ -150,8 +137,7 @@ export default function AllProjectView() {
         <s.MoreButton
           onClick={() => {
             setShowMoreButton(false);
-            setIsPageUpdate(true);
-            setPage((prev) => prev + 1);
+            setPage((prevPage) => prevPage + 1);
           }}
         >
           <Icon name="Loading" width={20} height={20} fill="white" />
@@ -171,35 +157,38 @@ export default function AllProjectView() {
 async function getProjects(
   setIsLoading: React.Dispatch<SetStateAction<boolean>>,
   updateProject: Updater<ProjectGalleryData>,
-  showMoreButton: boolean,
   isFetching: { current: boolean },
-  setIsPageUpdate: React.Dispatch<SetStateAction<boolean>>,
   currentCategory: string,
   page: number,
   sortOption: string,
+  hasMoreData: { current: boolean },
 ) {
   setIsLoading(true);
   try {
     let response = await fetch(`https://namju.store:8443/api/v1/projects?page=${page}&sort=${sortOption}`);
-
     if (currentCategory !== 'ALLPROJECT') {
       response = await fetch(
         `https://namju.store:8443/api/v1/projects?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
       );
     }
-    // const response = await fetch('dummy/projectCollection.json');
     const data = await response.json();
-    updateProject((draft) => {
-      if (!showMoreButton && data.data.projects.length) {
-        draft.data.projects = [...draft.data.projects, ...data.data.projects];
+
+    if (data.data.projects.length > 0) {
+      updateProject((draft) => {
+        if (page === 0) {
+          draft.data.projects = data.data.projects;
+        } else {
+          draft.data.projects = [...draft.data.projects, ...data.data.projects];
+        }
         draft.data.totalProjects = data.data.totalProjects;
         draft.data.totalMembers = data.data.totalMembers;
-      }
-    });
+      });
+    } else {
+      hasMoreData.current = false;
+    }
   } catch (err) {
     console.log(err);
   }
   setIsLoading(false);
   isFetching.current = false;
-  setIsPageUpdate(false);
 }

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useRef, useState } from 'react';
 import { CategoryContext } from '@/context/CategoryContext';
 import { ZoomImgProvider } from '@/context/ZoomContext';
 import { ProjectDetailContext } from '@/context/ProjectDetailContext';
@@ -14,6 +14,11 @@ import * as s from '@/style/projectDetail/ProjectDashboardStyle';
 export default function ProjectDashboard() {
   const { showShare } = useContext(ProjectDetailContext);
   const { currentCategory, setCurrentCategory } = useContext(CategoryContext);
+  const [width, setWidth] = useState(82);
+  const [categoryX, setCategoryX] = useState(20);
+  const categoryBoxRef = useRef<HTMLDivElement | null>(null);
+  const categoryRef = useRef<HTMLDivElement[]>([]);
+
   const categories = [
     { text: '프로젝트 정보', id: 'information' },
     { text: '출시', id: 'release' },
@@ -24,19 +29,30 @@ export default function ProjectDashboard() {
     <>
       {showShare && <Share />}
       <s.Section>
-        <s.CategoryBox>
+        <s.CategoryBox ref={categoryBoxRef}>
           {categories.map((category, key) => (
             <s.CategoryText
               key={key}
+              ref={(el) => {
+                if (el === null) return;
+                categoryRef.current[key] = el;
+              }}
               $id={category.id}
               $currentCategory={currentCategory}
               onClick={() => {
+                if (!categoryRef.current[key] || !categoryBoxRef.current) return;
+                setCategoryX(
+                  categoryRef.current[key].getBoundingClientRect().left -
+                    categoryBoxRef.current.getBoundingClientRect().left,
+                );
+                setWidth(categoryRef.current[key].getBoundingClientRect().width);
                 setCurrentCategory(category.id);
               }}
             >
               {category.text}
             </s.CategoryText>
           ))}
+          <s.UnderLine $width={width} $categoryX={categoryX} />
         </s.CategoryBox>
         <ZoomImgProvider>{currentCategory === 'information' && <ProjectInfo />}</ZoomImgProvider>
         {currentCategory === 'performance' && <Performance />}

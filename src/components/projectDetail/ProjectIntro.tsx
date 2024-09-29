@@ -8,6 +8,7 @@ import { Icon } from '@/components/common/Icon';
 import { getStroke } from '@/utils/getStroke';
 import * as s from '@/style/projectDetail/ProjectIntroStyle';
 import { getFill } from '@/utils/getFill';
+import { formatNumber } from '@/utils/formatNumber';
 
 export default function ProjectIntro() {
   const { projectInfo, updateProjectInfo, updateMemberInfo, updateAccomplishmentInfo } =
@@ -68,7 +69,11 @@ export default function ProjectIntro() {
 
   return (
     <s.Section ref={introRef}>
-      <s.Banner src={projectInfo.banner} alt="" />
+      {projectInfo.banner ? (
+        <s.Banner src={projectInfo.banner} alt="" />
+      ) : (
+        <s.ColorBanner $color={projectInfo.brandColor} />
+      )}
       <s.IntroSection>
         <s.MainImg src={projectInfo.thumbnail} alt="" />
         <s.ProjectName>{projectInfo.title}</s.ProjectName>
@@ -85,9 +90,8 @@ export default function ProjectIntro() {
                     name={currenticon}
                     width={14}
                     height={14}
-                    stroke={getStroke(currentIconIndex, iconWithFill, currentIconIndex)}
-                    fill={getFill(currentIconIndex, iconWithFill, currentIconIndex)}
-                  />
+                    stroke={getStroke(currentIconIndex, iconWithFill, currentIconIndex, '#32ade6')}
+                    fill={getFill(currentIconIndex, iconWithFill, currentIconIndex, '#32ade6')}
                   <p>{getCategoryText(text)}</p>
                 </s.Category>
               );
@@ -102,11 +106,12 @@ export default function ProjectIntro() {
 async function getData(updateData: Updater<ProjectInfo>, id: string) {
   try {
     const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}`);
-    // const response = await fetch('/public/dummy/atti2.json');
     const data = await response.json();
     updateData((obj) => {
       Object.assign(obj, data.data);
-      Object.assign(obj, data.data);
+      obj.likeCount = formatNumber(data.data.likeCount);
+      obj.viewCount = formatNumber(data.data.viewCount);
+      obj.subscribeCount = formatNumber(data.data.subscribeCount);
     });
   } catch (err) {
     console.log(err);
@@ -116,7 +121,6 @@ async function getData(updateData: Updater<ProjectInfo>, id: string) {
 async function getMember(updateData: Updater<Member>, id: string) {
   try {
     const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}/members`);
-    // const response = await fetch('/dummy/attiMember.json');
     const data = await response.json();
     updateData((obj) => {
       Object.assign(obj, data.data);
@@ -129,7 +133,6 @@ async function getMember(updateData: Updater<Member>, id: string) {
 async function getAccomplishment(updateAccomplishmentInfo: Updater<Accomplishment>, id: string) {
   try {
     const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}/accomplishments`);
-    // const response = await fetch('dummy/attiPerformance.json');
     const data = await response.json();
     updateAccomplishmentInfo((draft) => {
       Object.assign(draft, data.data);

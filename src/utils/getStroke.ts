@@ -1,7 +1,7 @@
-export function getStroke(idx: number, iconWithFill: number[], currentCategory: number) {
+export function getStroke(idx: number, iconWithFill: number[], currentCategory: number, color: string) {
   if (!iconWithFill.includes(idx)) {
     if (currentCategory === idx) {
-      return '#247BFF';
+      return color;
     }
     return '#47484C';
   }

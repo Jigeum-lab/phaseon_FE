@@ -11,11 +11,14 @@ import * as icons from '@/components/icon';
 export default function FloatingBox({ setShowModal }: { setShowModal: React.Dispatch<SetStateAction<boolean>> }) {
   const { projectInfo, memberInfo, accomplishmentInfo } = useContext(ProjectDetailContext);
 
-  const { setCurrentCategory, introRef } = useContext(CategoryContext);
+  const { setCurrentCategory } = useContext(CategoryContext);
 
   function changeCategory(category: string) {
     setCurrentCategory(category);
-    introRef.current?.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 
   const linkObj: { [key: string]: string } = {

@@ -25,7 +25,7 @@ export const Button = styled.button<{
   align-items: center;
   background-color: ${({ $type }) => ($type === 'star' ? '#69ACFF' : 'white')};
   outline: none;
-  gap: 5px;
+  gap: 4px;
   cursor: pointer;
 
   &&:hover {
