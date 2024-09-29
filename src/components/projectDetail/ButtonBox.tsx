@@ -18,8 +18,10 @@ export default function ButtonBox({ emblaApi, padding }: { emblaApi: EmblaCarous
         onClick={() => {
           if (!emblaApi) return;
           emblaApi.scrollNext();
-          emblaApi.plugins().autoScroll.stop();
-          startScroll(emblaApi);
+          if (emblaApi.plugins().autoScroll) {
+            emblaApi.plugins().autoScroll.stop();
+            startScroll(emblaApi);
+          }
         }}
       />
     </s.ButtonBox>

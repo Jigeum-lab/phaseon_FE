@@ -38,6 +38,10 @@ export default function Carousel() {
         <s.CarouselContainer>
           {slides.map((carouselObj, index) => {
             img.src = carouselObj.url;
+            let type = 'row';
+            if (img.width < img.height) {
+              type = 'col';
+            }
             if (carouselObj.mediaType === 'VIDEO') {
               return (
                 <s.CarouselSlide key={carouselObj.url + index}>
@@ -56,9 +60,13 @@ export default function Carousel() {
                 <s.Img
                   src={carouselObj.url}
                   alt=""
-                  $type={img.width >= 1920 ? 'row' : 'col'}
+                  $type={type}
                   onClick={() => {
-                    setStartImg(index);
+                    if (index > projectInfo.projectMedia.length - 1) {
+                      setStartImg(index - projectInfo.projectMedia.length);
+                    } else {
+                      setStartImg(index);
+                    }
                     setShowZoomComponent(true);
                     document.body.style.overflow = 'hidden';
                   }}
