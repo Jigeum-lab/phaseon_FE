@@ -32,13 +32,15 @@ export const Nav = styled.nav`
   gap: 40px;
 `;
 
-export const IconBox = styled.div<{ color: string }>`
+export const IconBox = styled.div<{ $color: string }>`
   width: 79px;
   font-size: 15px;
   display: flex;
   align-items: center;
   cursor: pointer;
   gap: 4px;
+  color: ${({ $color }) => $color};
+  font-size: 15px;
 `;
 
 export const RegisterButton = styled.button`
@@ -64,7 +66,7 @@ export const RegisterButton = styled.button`
   }
 `;
 
-export const Article = styled.p`
-  color: #47484c;
+export const Article = styled.p<{ $color: string }>`
+  color: ${({ $color }) => $color};
   font-size: 15px;
 `;
