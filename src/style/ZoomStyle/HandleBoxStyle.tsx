@@ -12,7 +12,8 @@ export const HandelBox = styled.section`
   align-items: center;
   position: absolute;
   top: 0;
-  z-index: 6;
+  cursor: pointer;
+  background-color: yellowgreen;
 `;
 
 export const Close = styled(Icon)`

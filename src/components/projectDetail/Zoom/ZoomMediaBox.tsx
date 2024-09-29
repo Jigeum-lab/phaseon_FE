@@ -108,18 +108,23 @@ export default function ZoomMediaBox() {
   };
 
   return (
-    <>
+    <s.Section
+      onClick={(e) => {
+        if (imgRef.current && !imgRef.current.contains(e.target as Node)) {
+          closeZoom(setIsZoomed, setZoomCount, updateTransform, setShowZoomComponent);
+        }
+      }}
+    >
       {carouselImgs[startImg].mediaType !== 'VIDEO' && (
-        <s.ImgWrapper
-          ref={imgWrapperRef}
-          onClick={() => {
-            closeZoom(setIsZoomed, setZoomCount, updateTransform, setShowZoomComponent);
-          }}
-          onDoubleClick={() => {
-            handleDoubleClick({ setIsZoomed, isZoomed, setZoomCount, updateTransform });
-          }}
-        >
-          <s.Div $zoomCount={zoomCount} $type={imgDirection}>
+        <s.ImgWrapper ref={imgWrapperRef}>
+          <s.Div
+            ref={imgRef}
+            $zoomCount={zoomCount}
+            $type={imgDirection}
+            onDoubleClick={() => {
+              handleDoubleClick({ setIsZoomed, isZoomed, setZoomCount, updateTransform });
+            }}
+          >
             <s.LeftButton
               name="LeftButton"
               onDoubleClick={(e) => {
@@ -138,7 +143,6 @@ export default function ZoomMediaBox() {
             <s.Img
               src={carouselImgs[startImg].url}
               alt=""
-              ref={imgRef}
               $zoomCount={zoomCount}
               $drag={drag}
               $dragOffSet={dragOffSet}
@@ -209,6 +213,6 @@ export default function ZoomMediaBox() {
           />
         </s.Div>
       )}
-    </>
+    </s.Section>
   );
 }

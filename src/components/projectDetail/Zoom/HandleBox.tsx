@@ -7,7 +7,11 @@ export default function HandleBox() {
   const { setShowZoomComponent, setIsZoomed, setZoomCount, updateTransform } = useContext(ZoomContext);
 
   return (
-    <s.HandelBox>
+    <s.HandelBox
+      onClick={() => {
+        closeZoom(setIsZoomed, setZoomCount, updateTransform, setShowZoomComponent);
+      }}
+    >
       <s.Close
         name="Close"
         fill="white"
