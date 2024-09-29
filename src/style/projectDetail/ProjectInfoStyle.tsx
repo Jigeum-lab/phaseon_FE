@@ -45,6 +45,7 @@ export const ProjectInformation = styled(ReactMarkdown)`
   }
   ul {
     padding: 0 20px;
+    box-sizing: border-box;
   }
   li {
     color: #47484c;
