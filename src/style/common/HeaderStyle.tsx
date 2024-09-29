@@ -34,13 +34,11 @@ export const Nav = styled.nav`
 
 export const IconBox = styled.div<{ color: string }>`
   width: 79px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   cursor: pointer;
   gap: 4px;
-
-  color: ${({ color }) => color};
-  font-size: 15px;
 `;
 
 export const RegisterButton = styled.button`
