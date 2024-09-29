@@ -39,8 +39,6 @@ export const IconBox = styled.div<{ color: string }>`
   cursor: pointer;
   gap: 4px;
 
-  color: ${({ color }) => color};
-  font-size: 15px;
 `;
 
 export const RegisterButton = styled.button`
