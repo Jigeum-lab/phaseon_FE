@@ -59,6 +59,10 @@ export default function AllProjects() {
                   <Icon name="Member" fill="#69ACFF" width={16} height={12} />
                   <p>{projectObj.memberCount}</p>
                 </s.IconBox>
+                <s.IconBox>
+                  <Icon name="View" />
+                  <p>{projectObj.viewCount}</p>
+                </s.IconBox>
               </s.InpoBox>
               <s.CategoryBox>
                 {projectObj.category.map((text, idx2) => {

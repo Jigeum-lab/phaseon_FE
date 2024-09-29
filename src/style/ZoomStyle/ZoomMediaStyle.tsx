@@ -17,11 +17,11 @@ export const Div = styled.div<{ $zoomCount: number; $type: string }>`
       return 70 * $zoomCount;
     }
     if ($type === 'col') {
-      return 40 * $zoomCount;
+      return 27 * $zoomCount;
     }
     return 100;
   }}%;
-  height: ${({ $type }) => ($type === 'row' ? '80%' : '75%')};
+  height: ${({ $type }) => ($type === 'row' ? '71%' : '85%')};
   position: relative;
   display: flex;
   align-items: center;

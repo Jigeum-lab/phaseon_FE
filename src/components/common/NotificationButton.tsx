@@ -29,9 +29,9 @@ export default function NotificationButton({
         setIsNotified((prev) => !prev);
         updateProjectInfo((update) => {
           if (isNotified) {
-            update.notificationCount--;
+            update.subscribeCount--;
           } else {
-            update.notificationCount++;
+            update.subscribeCount++;
           }
           update.isNotified = isNotified;
         });
@@ -39,7 +39,7 @@ export default function NotificationButton({
     >
       {isNotified ? <Icon name="FillNotification" /> : <Icon name="EmptyNotification" />}
       {children}
-      <p>{projectInfo.notificationCount}</p>
+      <p>{projectInfo.subscribeCount}</p>
     </s.Button>
   );
 }
