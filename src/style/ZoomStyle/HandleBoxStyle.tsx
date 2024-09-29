@@ -13,7 +13,6 @@ export const HandelBox = styled.section`
   position: absolute;
   top: 0;
   cursor: pointer;
-  background-color: yellowgreen;
 `;
 
 export const Close = styled(Icon)`
