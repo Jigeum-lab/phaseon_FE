@@ -43,6 +43,10 @@ export const ProjectInformation = styled(ReactMarkdown)`
     line-height: 144.5%;
     letter-spacing: -0.004px;
   }
+  ul {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
   li {
     color: #47484c;
     font-size: 16px;
