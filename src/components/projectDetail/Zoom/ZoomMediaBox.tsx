@@ -30,16 +30,19 @@ export default function ZoomMediaBox() {
   const [dragDirection, setDragDirection] = useState('none');
   const [imgDirection, setImgDirection] = useState('row');
   const carouselImgs = projectInfo.projectMedia;
-  const img = new Image();
-  img.src = carouselImgs[startImg].url;
 
   useEffect(() => {
-    if (img.width > img.height || carouselImgs[startImg].mediaType === 'VIDEO') {
-      setImgDirection('row');
-    } else {
-      setImgDirection('col');
-    }
-  }, [startImg, img.width, carouselImgs, img.height]);
+    const img = new Image();
+    img.src = carouselImgs[startImg].url;
+
+    img.onload = () => {
+      if (img.width > img.height) {
+        setImgDirection('row');
+      } else {
+        setImgDirection('col');
+      }
+    };
+  }, [carouselImgs, startImg]);
 
   useEffect(() => {
     const MouseMoveFunction = (e: MouseEvent) => {

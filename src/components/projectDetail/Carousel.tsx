@@ -1,24 +1,74 @@
 import useEmblaCarousel from 'embla-carousel-react';
 import { EmblaOptionsType } from 'embla-carousel';
 import YouTube from 'react-youtube';
-import { useCallback, useContext, useEffect, useState } from 'react';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { ProjectDetailContext } from '@/context/ProjectDetailContext';
 import * as s from '@/style/projectDetail/CarouselStyle';
 import { ZoomContext } from '@/context/ZoomContext';
 import ButtonBox from '@/components/projectDetail/ButtonBox';
 
 export default function Carousel() {
+  interface ThumbnailType {
+    url: string;
+    type: string;
+    order: number;
+  }
+
   const options: EmblaOptionsType = { align: 'center', loop: true, slidesToScroll: 2 };
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const { projectInfo } = useContext(ProjectDetailContext);
   const { setStartImg, setShowZoomComponent } = useContext(ZoomContext);
   const [currentImg, setCurrentImg] = useState<number>(0);
-  const img = new Image();
+  const [thumbnails, setThumbnails] = useState<ThumbnailType[]>([]);
+  const [imgDirection, setImgDirection] = useState<string[]>([]);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const projectLength = projectInfo.projectMedia.length;
-  const slides =
-    projectInfo.projectMedia.length <= 3
-      ? [...projectInfo.projectMedia, ...projectInfo.projectMedia]
-      : projectInfo.projectMedia;
+
+  useEffect(() => {
+    const slides =
+      projectInfo.projectMedia.length <= 3
+        ? [...projectInfo.projectMedia, ...projectInfo.projectMedia]
+        : projectInfo.projectMedia;
+    const thumbnailArray: ThumbnailType[] = [];
+
+    slides.forEach((imgObj, idx) => {
+      const tmpImg = new Image();
+      tmpImg.src = imgObj.url;
+      tmpImg.crossOrigin = 'anonymous';
+
+      tmpImg.onload = () => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        canvas.width = tmpImg.width;
+        canvas.height = tmpImg.height;
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        ctx.drawImage(tmpImg, 0, 0);
+        const thumbnail = canvas.toDataURL('image/png');
+
+        if (imgObj.mediaType === 'IMAGE') {
+          thumbnailArray[idx] = {
+            url: thumbnail,
+            type: imgObj.mediaType,
+            order: imgObj.order,
+          };
+        } else {
+          thumbnailArray[idx] = {
+            url: imgObj.url,
+            type: imgObj.mediaType,
+            order: imgObj.order,
+          };
+        }
+
+        if (thumbnailArray.length === slides.length) {
+          setThumbnails(thumbnailArray);
+        }
+      };
+    });
+  }, [projectInfo]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -31,18 +81,39 @@ export default function Carousel() {
     emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
 
+  useEffect(() => {
+    const loadImgDirection = async () => {
+      const directions = await Promise.all(
+        thumbnails.map((carouselObj) => {
+          return new Promise<string>((resolve) => {
+            const img = new Image();
+            img.src = carouselObj.url;
+
+            img.onload = () => {
+              if (img.width > img.height) {
+                resolve('row');
+              } else {
+                resolve('col');
+              }
+            };
+          });
+        }),
+      );
+
+      setImgDirection(directions);
+    };
+
+    loadImgDirection();
+  }, [thumbnails]);
+
   return (
     <s.Section>
+      <canvas ref={canvasRef} style={{ display: 'none' }} />
       <ButtonBox emblaApi={emblaApi} padding={20} />
       <s.CarouselViewport ref={emblaRef}>
         <s.CarouselContainer>
-          {slides.map((carouselObj, index) => {
-            img.src = carouselObj.url;
-            let type = 'row';
-            if (img.width < img.height) {
-              type = 'col';
-            }
-            if (carouselObj.mediaType === 'VIDEO') {
+          {thumbnails.map((carouselObj, index) => {
+            if (carouselObj.type === 'VIDEO') {
               return (
                 <s.CarouselSlide key={carouselObj.url + index}>
                   <YouTube
@@ -60,7 +131,7 @@ export default function Carousel() {
                 <s.Img
                   src={carouselObj.url}
                   alt=""
-                  $type={type}
+                  $type={imgDirection[index]}
                   onClick={() => {
                     if (index > projectInfo.projectMedia.length - 1) {
                       setStartImg(index - projectInfo.projectMedia.length);
@@ -76,7 +147,7 @@ export default function Carousel() {
           })}
         </s.CarouselContainer>
         <s.ButtonSection>
-          {slides.map((_carouselObj, index) => {
+          {thumbnails.map((_carouselObj, index) => {
             if (index < projectLength / 2) {
               return (
                 <s.SlideButton
