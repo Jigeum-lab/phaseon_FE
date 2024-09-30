@@ -21,7 +21,6 @@ export const AwardBox = styled.section`
 export const Award = styled.section`
   margin-bottom: 8px;
   width: 256px;
-  height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
