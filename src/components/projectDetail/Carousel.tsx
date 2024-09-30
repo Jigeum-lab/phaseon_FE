@@ -20,19 +20,18 @@ export default function Carousel() {
   const { setStartImg, setShowZoomComponent } = useContext(ZoomContext);
   const [currentImg, setCurrentImg] = useState<number>(0);
   const [thumbnails, setThumbnails] = useState<ThumbnailType[]>([]);
+  const [imgDirection, setImgDirection] = useState<string[]>([]);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const projectLength = projectInfo.projectMedia.length;
-  const img = new Image();
 
   useEffect(() => {
     const slides =
       projectInfo.projectMedia.length <= 3
         ? [...projectInfo.projectMedia, ...projectInfo.projectMedia]
         : projectInfo.projectMedia;
-
     const thumbnailArray: ThumbnailType[] = [];
 
-    slides.forEach((imgObj) => {
+    slides.forEach((imgObj, idx) => {
       const tmpImg = new Image();
       tmpImg.src = imgObj.url;
       tmpImg.crossOrigin = 'anonymous';
@@ -50,18 +49,18 @@ export default function Carousel() {
         ctx.drawImage(tmpImg, 0, 0);
         const thumbnail = canvas.toDataURL('image/png');
 
-        if (imgObj.mediaType === 'VIDEO') {
-          thumbnailArray.push({
-            url: imgObj.url,
-            type: imgObj.mediaType,
-            order: imgObj.order,
-          });
-        } else {
-          thumbnailArray.push({
+        if (imgObj.mediaType === 'IMAGE') {
+          thumbnailArray[idx] = {
             url: thumbnail,
             type: imgObj.mediaType,
             order: imgObj.order,
-          });
+          };
+        } else {
+          thumbnailArray[idx] = {
+            url: imgObj.url,
+            type: imgObj.mediaType,
+            order: imgObj.order,
+          };
         }
 
         if (thumbnailArray.length === slides.length) {
@@ -82,6 +81,31 @@ export default function Carousel() {
     emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
 
+  useEffect(() => {
+    const loadImgDirection = async () => {
+      const directions = await Promise.all(
+        thumbnails.map((carouselObj) => {
+          return new Promise<string>((resolve) => {
+            const img = new Image();
+            img.src = carouselObj.url;
+
+            img.onload = () => {
+              if (img.width > img.height) {
+                resolve('row');
+              } else {
+                resolve('col');
+              }
+            };
+          });
+        }),
+      );
+
+      setImgDirection(directions);
+    };
+
+    loadImgDirection();
+  }, [thumbnails]);
+
   return (
     <s.Section>
       <canvas ref={canvasRef} style={{ display: 'none' }} />
@@ -89,7 +113,6 @@ export default function Carousel() {
       <s.CarouselViewport ref={emblaRef}>
         <s.CarouselContainer>
           {thumbnails.map((carouselObj, index) => {
-            img.src = carouselObj.url;
             if (carouselObj.type === 'VIDEO') {
               return (
                 <s.CarouselSlide key={carouselObj.url + index}>
@@ -108,7 +131,7 @@ export default function Carousel() {
                 <s.Img
                   src={carouselObj.url}
                   alt=""
-                  $type={img.width < img.height ? 'col' : 'row'}
+                  $type={imgDirection[index]}
                   onClick={() => {
                     if (index > projectInfo.projectMedia.length - 1) {
                       setStartImg(index - projectInfo.projectMedia.length);
