@@ -63,6 +63,7 @@ export const View = styled.p`
 `;
 
 export const PromotionBox = styled.div`
+  padding-bottom: 8px;
   width: 188px;
   border-bottom: 1px solid #cfebff7f;
   display: flex;
