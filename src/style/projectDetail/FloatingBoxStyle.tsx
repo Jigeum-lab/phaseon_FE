@@ -5,7 +5,7 @@ export const Section = styled.section<{ $buttonNum: number }>`
   margin-bottom: 470px;
   padding: 16px 16px 8px 16px;
   width: 220px;
-  height: calc(375px + ${({ $buttonNum }) => $buttonNum * 36}px);
+  height: calc(397px + ${({ $buttonNum }) => $buttonNum * 36}px);
   box-sizing: border-box;
   border-radius: 4px;
   box-shadow:
@@ -135,10 +135,10 @@ export const CoffeeChatText = styled.p`
 
 export const Title = styled.p`
   color: #171719;
-  font-size: 11px;
-  font-weight: 590;
-  line-height: 13px;
-  letter-spacing: 0.06px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 142.9%;
+  letter-spacing: 0.203px;
 `;
 
 export const ImgBox = styled.div`
