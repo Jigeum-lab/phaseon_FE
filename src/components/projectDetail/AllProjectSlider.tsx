@@ -110,7 +110,7 @@ export default function AllProjectSlider() {
 async function getProjects(updateData: Updater<ProjectGalleryData>) {
   try {
     const response = await fetch(
-      'https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1//projects?page=0&size=100&sort=createdAt',
+      'https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1/projects?page=0&size=100&sort=createdAt',
     );
     const data = await response.json();
     updateData((slideObj) => {
