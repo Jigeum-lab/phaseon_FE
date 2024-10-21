@@ -170,11 +170,11 @@ async function getProjects(
   setIsLoading(true);
   try {
     let response = await fetch(
-      `https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1//projects?page=${page}&sort=${sortOption}`,
+      `https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1/projects?page=${page}&sort=${sortOption}`,
     );
     if (currentCategory !== 'ALLPROJECT') {
       response = await fetch(
-        `https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1//projects?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
+        `https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1/projects?page=${page}&size=10&sort=${sortOption}&category=${currentCategory}`,
       );
     }
     const data = await response.json();

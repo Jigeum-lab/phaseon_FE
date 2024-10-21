@@ -106,7 +106,7 @@ export default function ProjectIntro() {
 
 async function getData(updateData: Updater<ProjectInfo>, id: string) {
   try {
-    const response = await fetch(`https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1//projects/${id}`);
+    const response = await fetch(`https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1/projects/${id}`);
     const data = await response.json();
     updateData((obj) => {
       Object.assign(obj, data.data);
@@ -122,7 +122,7 @@ async function getData(updateData: Updater<ProjectInfo>, id: string) {
 async function getMember(updateData: Updater<Member>, id: string) {
   try {
     const response = await fetch(
-      `https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1//projects/${id}/members`,
+      `https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1/projects/${id}/members`,
     );
     const data = await response.json();
     updateData((obj) => {
@@ -136,7 +136,7 @@ async function getMember(updateData: Updater<Member>, id: string) {
 async function getAccomplishment(updateAccomplishmentInfo: Updater<Accomplishment>, id: string) {
   try {
     const response = await fetch(
-      `https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1//projects/${id}/accomplishments`,
+      `https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1/projects/${id}/accomplishments`,
     );
     const data = await response.json();
     updateAccomplishmentInfo((draft) => {
