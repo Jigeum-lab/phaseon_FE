@@ -27,7 +27,9 @@ export default function Release() {
 
 async function getRelease(updateReleaseInfo: Updater<ReleaseType>, id: string) {
   try {
-    const response = await fetch(`https://namju.store:8443/api/v1/projects/${id}/release`);
+    const response = await fetch(
+      `https://port-0-bay-core-m20bg38se8c2b49b.sel4.cloudtype.app/api/v1//projects/${id}/release`,
+    );
     const data = await response.json();
     updateReleaseInfo((draft) => {
       Object.assign(draft, data.data);
